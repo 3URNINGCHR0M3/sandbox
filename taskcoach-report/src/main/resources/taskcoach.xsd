@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid XML Studio 1.0.8.0 (http://www.liquid-technologies.com) -->
+<xs:schema xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" elementFormDefault="qualified" jaxb:version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:appinfo>
+      <jaxb:schemaBindings xmlns:jaxb="http://java.sun.com/xml/ns/jaxb">
+        <jaxb:package name="net.forje.taskcoach.jaxb" />
+      </jaxb:schemaBindings>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="tasks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="category">
+          <xs:complexType>
+            <xs:attribute name="categorizables" type="xs:string" use="optional" />
+            <xs:attribute name="id" type="xs:string" use="optional" />
+            <xs:attribute name="status" type="xs:string" use="optional" />
+            <xs:attribute name="subject" type="xs:string" use="optional" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="note">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="description" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:string" use="optional" />
+            <xs:attribute name="status" type="xs:string" use="optional" />
+            <xs:attribute name="subject" type="xs:string" use="optional" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="syncmlconfig">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="TaskCoach-0000012c9da94d4321a2d438000a00030007003c">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="spds">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="sources">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element minOccurs="0" name="TaskCoach-0000012c9da94d4321a2d438000a00030007003c.Tasks" />
+                                <xs:element minOccurs="0" name="TaskCoach-0000012c9da94d4321a2d438000a00030007003c.Notes" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element minOccurs="0" name="syncml">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element minOccurs="0" name="Auth" />
+                                <xs:element minOccurs="0" name="Conn" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="guid" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="task" type="TaskType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="EffortType">
+    <xs:sequence minOccurs="0">
+      <xs:element minOccurs="0" name="description" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute name="stop" type="xs:string" use="optional" />
+    <xs:attribute name="status" type="xs:string" use="optional" />
+    <xs:attribute name="start" type="xs:string" use="optional" />
+    <xs:attribute name="id" type="xs:string" use="optional" />
+  </xs:complexType>
+  <xs:complexType name="TaskType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="task" type="TaskType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="note" type="NoteType" />
+      <xs:element minOccurs="0" name="description" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="effort" type="EffortType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="attachment" type="AttachementType" />
+    </xs:sequence>
+    <xs:attribute name="percentageComplete" type="xs:string" use="optional" />
+    <xs:attribute name="completiondate" type="xs:string" use="optional" />
+    <xs:attribute name="subject" type="xs:string" use="optional" />
+    <xs:attribute name="status" type="xs:string" use="optional" />
+    <xs:attribute name="startdate" type="xs:string" use="optional" />
+    <xs:attribute name="id" type="xs:string" use="optional" />
+    <xs:attribute name="duedate" type="xs:string" use="optional" />
+    <xs:attribute name="expandedContexts" type="xs:string" use="optional" />
+  </xs:complexType>
+  <xs:complexType name="NoteType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="description" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute name="subject" type="xs:string" use="optional" />
+    <xs:attribute name="status" type="xs:string" use="optional" />
+    <xs:attribute name="id" type="xs:string" use="optional" />
+  </xs:complexType>
+  <xs:complexType name="AttachementType">
+    <xs:attribute name="id" type="xs:string" use="optional" />
+    <xs:attribute name="location" type="xs:string" />
+    <xs:attribute name="status" type="xs:string" />
+    <xs:attribute name="subject" type="xs:string" use="optional" />
+    <xs:attribute name="type" type="xs:string" />
+  </xs:complexType>
+</xs:schema>

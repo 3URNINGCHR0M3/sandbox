@@ -1,0 +1,1 @@
+java -jar taskcoach-1.0-SNAPSHOT.jar -inputFile "C:/Documents and Settings/egxizjo/My Documents/TaskCoach/taskcoach.tsk" -report AutoHotKeyEffortReport -reportDate %1

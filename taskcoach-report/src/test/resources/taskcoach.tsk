@@ -1,0 +1,420 @@
+<?xml version="1.0" ?>
+<?taskcoach release="1.2.5" tskversion="31"?>
+<tasks>
+<task expandedContexts="('taskviewer',)" id="44980912:1291237864.93" startdate="2010-12-01 16:11:00" status="1" subject="SEEC">
+<task id="47361872:1291237875.95" startdate="2010-12-01 16:11:00" status="1" subject="ant script support">
+<task id="45774160:1291237896.96" startdate="2010-12-01 16:11:00" status="1" subject="Pragnya - 12/01/2010">
+<effort id="45743632:1291237911.39" start="2010-12-01 16:11:51" status="1" stop="2010-12-01 16:55:11"/>
+</task>
+</task>
+<task id="44040304:1291402002.36" startdate="2010-12-03 13:46:00" status="1" subject="code review">
+<task id="50448592:1291402012.12" startdate="2010-12-03 13:46:00" status="1" subject="tauberg support">
+<effort id="47313008:1291402024.74" start="2010-12-03 13:15:00" status="1" stop="2010-12-03 13:30:00"/>
+<effort id="47686672:1291402527.49" start="2010-12-03 13:55:27" status="1" stop="2010-12-03 13:57:08"/>
+<effort id="55342448:1291407537.14" start="2010-12-03 15:18:57" status="1" stop="2010-12-03 15:29:34"/>
+</task>
+</task>
+<task id="49495376:1291924993.75" startdate="2010-12-09 15:03:00" status="1" subject="weeekly meetings">
+<effort id="54895152:1291925054.09" start="2010-12-09 15:04:14" status="1" stop="2010-12-09 15:51:31"/>
+</task>
+<effort id="44142224:1291991475.65" start="2010-12-10 09:04:50" status="1" stop="2010-12-10 09:31:57">
+<description>
+Conversation with russ about testing framework, modularization of code base
+</description>
+</effort>
+</task>
+<task expandedContexts="('taskviewer',)" id="44823024:1291229845.13" startdate="2010-12-01 13:57:00" status="1" subject="HealthPartners production PPI roll out">
+<task expandedContexts="('taskviewer',)" id="46466864:1291229961.81" startdate="2010-12-01 13:59:00" status="1" subject="ERX-47600 - obsolete product problem">
+<effort id="46465424:1291232104.44" start="2010-12-01 14:35:04" status="1" stop="2010-12-01 15:01:17"/>
+<effort id="54895920:1291928522.33" start="2010-12-09 15:51:31" status="1" stop="2010-12-09 16:05:16">
+<description>
+Converstaion with Jen about how to address issue.
+</description>
+</effort>
+</task>
+<task completiondate="2010-12-06 17:00:41.302000" id="45832752:1291230059.83" percentageComplete="100" startdate="2010-12-01 14:00:00" status="1" subject="missing messages">
+<effort id="47242800:1291230074.79" start="2010-12-01 14:01:14" status="1" stop="2010-12-01 14:18:00"/>
+<note id="45707504:1291231096.9" status="1" subject="initial observations">
+<description>
+There were two errors while attempting to parse messages. They occurred at the following times: 
+12/1/10 12:39:47 PM EST12/1/10 12:46:47 PM EST 
+We should see if Epic can confirm that the messages were sent at these times. 
+One appears to be an issue with the size of the a field, don't know which one. The other appears to be a problem with the to and from field in the header of a message. Didn't match the regular expression for the field. 
+Unfortunately, we don't have the details of the messages. If Epic can find the messages, I can possibly identify the offending fields using other tools.
+
+</description>
+</note>
+<note id="52039856:1291672814.45" status="1" subject="resolved">
+<description>
+both of these problems were traced back to issues @ Epic.
+</description>
+</note>
+</task>
+<task completiondate="2010-12-02 09:40:18.984000" id="47354352:1291237037.34" percentageComplete="100" startdate="2010-12-01 15:57:00" status="1" subject="link ppi facilities for SureScripts">
+<task completiondate="2010-12-02 09:40:18.984000" id="45653040:1291297942.81" percentageComplete="100" startdate="2010-12-02 08:52:00" status="1" subject="add the ppi_facility record">
+<effort id="45788784:1291298933.1" start="2010-12-02 09:08:53" status="1" stop="2010-12-02 09:34:53"/>
+<note id="47193200:1291300411.0" status="1" subject="looks like auto add work"/>
+</task>
+<effort id="44978224:1291237061.11" start="2010-12-01 15:57:41" status="1" stop="2010-12-01 16:08:24"/>
+</task>
+<task completiondate="2010-12-06 11:36:39.059000" id="44843952:1291297863.31" percentageComplete="100" startdate="2010-12-02 08:51:00" status="1" subject="follow up on the linking jobs">
+<effort id="44133776:1291298076.65" start="2010-12-02 08:54:36" status="1" stop="2010-12-02 09:08:48"/>
+<note id="44845552:1291298709.57" status="1" subject="discussion with Bill Lockwich">
+<description>
+batch jobs set up in tidal but not enabled
+asked bill to enabled
+asked bill to kick off synch manager and address link
+HP provided new file w/ 72 records, one with news &amp; refills, all other just new rx
+</description>
+</note>
+</task>
+<task id="45608208:1291305749.99" startdate="2010-12-02 11:02:00" status="1" subject="monitor PPI interface">
+<task completiondate="2010-12-10 08:19:02.330000" id="44834480:1291665415.78" percentageComplete="100" startdate="2010-12-06 14:56:00" status="1" subject="RR0000479-14">
+<effort id="47530096:1291665442.04" start="2010-12-06 14:57:22" status="1" stop="2010-12-06 15:15:35"/>
+<effort id="50381360:1291667457.29" start="2010-12-06 15:30:57" status="1" stop="2010-12-06 16:01:55"/>
+<effort id="48328656:1291987109.16" start="2010-12-10 08:18:29" status="1" stop="2010-12-10 08:19:01"/>
+<note id="51160176:1291668413.68" status="1" subject="no obvious explaination">
+<description>
+looking at the data for this prescriber, I can see no reason why PPI wasn't picked as contact method
+
+facility_num = 1008604
+prescriber_address_num = 1189676
+rx_record_num = 10008104821
+ppi_registry_addr_num = 1367554
+ppi_registry_num= 1317776
+rx_record_num = 10008104821
+contact_event_num = 10004954379
+</description>
+</note>
+<note id="49107568:1291987117.63" status="1" subject="Ryan Sunderman reported as resolved">
+<description>
+said issue with prescriber had been resolved.
+</description>
+</note>
+</task>
+<task expandedContexts="('taskviewer',)" id="49559408:1291827041.22" startdate="2010-12-08 11:50:00" status="1" subject="refill request failures">
+<task completiondate="2010-12-08 14:00:52.841000" duedate="2010-12-08 23:59:00" id="48910640:1291830118.03" percentageComplete="100" startdate="2010-12-08 12:41:00" status="1" subject="create JIRA issue for patient address insert">
+<effort id="52805872:1291832671.84" start="2010-12-08 13:24:31" status="1" stop="2010-12-08 14:00:36"/>
+<attachment id="54207696:1291830145.71" location="C:\working\HP production\issues\address to large.txt" status="1" subject="address to large.txt" type="file"/>
+</task>
+<task id="54896144:1291929118.83" startdate="2010-12-09 16:11:00" status="1" subject="Max size of PPI elements">
+<effort id="54894992:1291929136.66" start="2010-12-09 16:05:16" status="1" stop="2010-12-09 16:16:18"/>
+</task>
+<effort id="51899696:1291827059.25" start="2010-12-08 11:50:24" status="1" stop="2010-12-08 12:45:00"/>
+<effort id="48026928:1291840879.54" start="2010-12-08 15:37:52" status="1" stop="2010-12-08 16:00:08"/>
+</task>
+<task id="43712368:1291913898.17" startdate="2010-12-09 11:58:00" status="1" subject="Compound issue">
+<effort id="44897488:1291913927.0" start="2010-12-09 11:58:10" status="1" stop="2010-12-09 12:20:13"/>
+</task>
+<effort id="45677744:1291305771.64" start="2010-12-02 10:00:00" status="1" stop="2010-12-02 11:00:00"/>
+</task>
+<task id="48664112:1291397800.25" startdate="2010-12-03 12:36:00" status="1" subject="ERX-47769 - wrong user on transaction note">
+<effort id="47731728:1291397823.17" start="2010-12-03 12:37:03" status="1" stop="2010-12-03 14:10:00"/>
+<note id="49035600:1291403139.72" status="1" subject="confirm problem">
+<description>
+confirm that transaction note is being created with user = 3.  Not able to figure out why.  Looking at the code, it should be 0.
+
+Going to dig into 2.3.1.h code directly.
+</description>
+</note>
+<note id="54371120:1291672690.38" status="1" subject="observation from ryan, denyies only">
+<description>
+this is only happneing on simple denies.  need to confirm
+</description>
+</note>
+</task>
+<task expandedContexts="('taskviewer',)" id="47011664:1291650244.96" startdate="2010-12-06 10:44:00" status="1" subject="directory monitoring">
+<task completiondate="2010-12-06 17:14:30.446000" id="52780816:1291672883.68" percentageComplete="100" startdate="2010-12-06 17:01:00" status="1" subject="Heidi Yee - 6292305599002">
+<description>
+problem was with the SPI that Epic was using.  Temp, which was not valid.  SPI was revised in Epic and updated via directory export.
+</description>
+</task>
+<effort id="45578544:1291650284.78" start="2010-12-06 10:37:15" status="1" stop="2010-12-06 10:44:59"/>
+<effort id="47824944:1291650317.05" start="2010-12-06 10:45:17" status="1" stop="2010-12-06 10:54:17"/>
+<effort id="47826480:1291650952.37" start="2010-12-06 10:55:52" status="1" stop="2010-12-06 10:55:54"/>
+</task>
+<task completiondate="2010-12-06 12:17:16.536000" id="44858768:1291650832.43" percentageComplete="100" startdate="2010-12-06 10:53:00" status="1" subject="resolve scheduling issue with HP full directory">
+<effort id="46666448:1291650957.36" start="2010-12-06 10:55:57" status="1" stop="2010-12-06 10:58:44"/>
+<effort id="47083792:1291654278.82" start="2010-12-06 11:50:28" status="1" stop="2010-12-06 12:17:15">
+<description>
+emails 
+</description>
+</effort>
+<note id="47016272:1291655773.0" status="1" subject="resolution">
+<description>
+Full was scheduled for Sunday in EnterpriseRx, but Saturday @ Epic.  Jim Francis modified schedule in Tidal to run full on Saturday instead.
+</description>
+</note>
+</task>
+<task completiondate="2010-12-06 11:58:38.074000" id="49609968:1291651683.54" percentageComplete="100" startdate="2010-12-06 11:08:00" status="1" subject="Store 31 Inver Grove not receiving refill requests">
+<effort id="50739952:1291651739.63" start="2010-12-06 10:58:44" status="1" stop="2010-12-06 11:35:59"/>
+<note id="52181968:1291654636.21" status="1" subject="Epic sending the NCPDP">
+<description>
+Ryan @ HealthPartners identified the cause as Epic sending the wrong NCPDP.  This was corrected and message were processed into EnterpriseRx.
+</description>
+</note>
+</task>
+<task id="49232912:1291653005.25" startdate="2010-12-06 11:30:00" status="1" subject="add rest of ppi facilities manually">
+<effort id="52104016:1291656597.03" start="2010-12-06 12:17:15" status="1" stop="2010-12-06 12:42:03">
+<description>
+Verify that all of the stores going live on 12/6 are set up correctly for PPI.
+</description>
+</effort>
+<note id="51025104:1291657143.93" status="1" subject="list of stores for 12/6 - All good">
+<description>
+AV- Apply Valley + 
+BL- Bloomington + 
+CN- Coon Rapids + 
+HSC-Health Specialty Center + 
+IG- Inver Grove Heights + 
+MA- Maplewood + 
+RI- Riverside + 
+WB- White Bear + 
+</description>
+</note>
+<note id="49474224:1291657298.54" status="1" subject="query used to confirm configuration">
+<description>
+select  f.facility_id, pf.store_number, pn.network_name, dg.name, pf.store_name,f.is_ppi_enabled, f.ncpdp_provider_id, pf.ncpdp_id, pf.service_level, pf.local_service_level
+from    facility f
+join data_group dg on (dg.data_group = f.facility_num)
+left outer join ppi_facility pf on (pf.facility_num = f.facility_num)
+left outer join ppi_network pn on (pf.ppi_network_num = pn.ppi_network_num)
+order by facility_id;
+</description>
+</note>
+</task>
+<task id="50739440:1291654143.69" startdate="2010-12-06 11:49:00" status="1" subject="PPI facility issues">
+<description>
+Issues related to ppi tab on facility admin  screen
+</description>
+<effort id="44028368:1291654177.42" start="2010-12-06 11:35:59" status="1" stop="2010-12-06 11:50:28">
+<description>
+sent email to group describing issue
+</description>
+</effort>
+</task>
+<task completiondate="2010-12-06 16:59:31.773000" id="51043856:1291655841.46" percentageComplete="100" startdate="2010-12-06 12:17:00" status="1" subject="process full prescriber directory from Epic to catch up">
+<description>
+Because we didn't process full file produced by HealthPartners on Saturday, I have asked HealthPartners  to produce a new full file for us in the next 24 hours.
+</description>
+<effort id="50381232:1291666552.21" start="2010-12-06 15:15:35" status="1" stop="2010-12-06 15:30:51">
+<description>
+Created JIRA issue OPS-14515 to have batch job run again.
+</description>
+</effort>
+</task>
+<task expandedContexts="('taskviewer',)" id="50560272:1291657797.15" startdate="2010-12-06 12:49:00" status="1" subject="Meetings">
+<task id="50321040:1291657899.74" startdate="2010-12-06 12:51:00" status="1" subject="12/06 meeting">
+<effort id="51097360:1291657818.04" start="2010-12-06 12:42:03" status="1" stop="2010-12-06 12:51:30">
+<description>
+Touch base with Zach about meeting.  
+He will be on the call.
+</description>
+</effort>
+<effort id="52809424:1291671590.23" start="2010-12-06 16:00:00" status="1" stop="2010-12-06 16:56:52"/>
+</task>
+<effort id="43930576:1291910439.62" start="2010-12-09 11:00:39" status="1" stop="2010-12-09 11:58:10"/>
+</task>
+<task id="54924976:1291921338.51" startdate="2010-12-09 14:02:00" status="1" subject="ERX-47918 - error populating form data for PPI image generation">
+<effort id="56181616:1291921399.37" start="2010-12-09 14:03:19" status="1" stop="2010-12-09 14:28:20"/>
+</task>
+<task id="47919632:1291987213.78" startdate="2010-12-10 08:20:00" status="1" subject="ERX-47999 - enhancement to discharge delivery option feature">
+<effort id="51079632:1291987438.84" start="2010-12-10 08:20:02" status="1" stop="2010-12-10 09:04:50"/>
+</task>
+<effort id="51642480:1291672848.89" start="2010-12-06 16:56:52" status="1" stop="2010-12-06 17:54:31">
+<description>
+issue review and resolution
+</description>
+</effort>
+<effort id="44841232:1291735797.29" start="2010-12-07 10:15:00" status="1" stop="2010-12-07 10:35:47"/>
+<effort id="50336272:1291838091.71" start="2010-12-08 14:29:53" status="1" stop="2010-12-08 15:34:19"/>
+<effort id="44870064:1291903301.83" start="2010-12-09 09:01:41" status="1" stop="2010-12-09 09:08:02"/>
+<effort id="44896912:1291905011.14" start="2010-12-09 13:45:00" status="1" stop="2010-12-09 14:28:20"/>
+</task>
+<task id="47241744:1291396171.64" startdate="2010-12-03 12:09:00" status="1" subject="Support">
+<task id="47272464:1291396145.48" startdate="2010-12-03 12:09:00" status="1" subject="Safeway">
+<task id="49910032:1291915223.39" startdate="2010-12-09 12:20:00" status="1" subject="ppi">
+<effort id="49917104:1291915235.11" start="2010-12-09 12:20:13" status="1" stop="2010-12-09 12:25:02"/>
+</task>
+<effort id="44006256:1291396206.97" start="2010-12-03 12:05:00" status="1" stop="2010-12-03 12:20:43">
+<description>
+conversation with Todd Strope about prescriber linking problem  / prescriber mergeing
+</description>
+</effort>
+</task>
+<task id="51906832:1291406684.77" startdate="2010-12-03 15:04:00" status="1" subject="Publix">
+<task id="54693808:1291406700.9" startdate="2010-12-03 15:05:00" status="1" subject="ERX-45111">
+<effort id="47846032:1291406717.06" start="2010-12-03 15:05:17" status="1" stop="2010-12-03 16:30:05"/>
+<effort id="43737616:1291920695.25" start="2010-12-09 13:30:00" status="1" stop="2010-12-09 13:45:00"/>
+</task>
+</task>
+<task id="47755088:1291665221.49" startdate="2010-12-06 14:53:00" status="1" subject="Fairview">
+<task id="44837008:1291665235.82" startdate="2010-12-06 14:53:00" status="1" subject="PPI inteface">
+<effort id="46145072:1291665249.94" start="2010-12-06 14:54:09" status="1" stop="2010-12-06 14:56:43"/>
+</task>
+<task id="49613680:1291834862.23" startdate="2010-12-08 14:01:00" status="1" subject="Emporos interface">
+<effort id="50336464:1291835309.12" start="2010-12-08 14:00:36" status="1" stop="2010-12-08 14:29:53"/>
+<effort id="54851696:1291840608.58" start="2010-12-08 15:34:19" status="1" stop="2010-12-08 15:37:52"/>
+<effort id="45951184:1291842012.36" start="2010-12-08 16:00:12" status="1" stop="2010-12-08 16:39:53"/>
+<effort id="51662288:1291845603.88" start="2010-12-08 16:39:53" status="1" stop="2010-12-08 17:03:25"/>
+<effort id="102770640:1291848019.78" start="2010-12-08 17:19:43" status="1" stop="2010-12-08 17:47:15"/>
+<effort id="44867760:1291903684.84" start="2010-12-09 09:08:04" status="1" stop="2010-12-09 09:16:05"/>
+<effort id="44926800:1291907462.94" start="2010-12-09 10:00:00" status="1" stop="2010-12-09 10:44:33"/>
+</task>
+</task>
+<task id="45901552:1291820438.68" startdate="2010-12-08 10:00:00" status="1" subject="Dierbergs">
+<task id="46351088:1291820486.62" startdate="2010-12-08 10:01:00" status="1" subject="12-08-2010 upgrade">
+<description>
+upgraded to 2.3.2.3-6167
+</description>
+<effort id="45951824:1291820537.66" start="2010-12-08 05:00:00" status="1" stop="2010-12-08 07:30:00"/>
+<effort id="45951760:1291820574.03" start="2010-12-08 10:02:54" status="1" stop="2010-12-08 11:04:20"/>
+<effort id="48889840:1291826785.81" start="2010-12-08 11:46:25" status="1" stop="2010-12-08 11:50:24"/>
+<effort id="51658960:1291845812.05" start="2010-12-08 17:03:32" status="1" stop="2010-12-08 17:13:35"/>
+</task>
+</task>
+<task id="45901808:1291846562.04" startdate="2010-12-08 17:16:00" status="1" subject="Kinney">
+<task id="51727216:1291846573.78" startdate="2010-12-08 17:16:00" status="1" subject="Datestamp issue on form vs message">
+<effort id="53880816:1291846644.2" start="2010-12-08 17:13:35" status="1" stop="2010-12-08 17:19:43"/>
+</task>
+</task>
+<task id="47019536:1291909598.09" startdate="2010-12-09 10:46:00" status="1" subject="Homeland">
+<task id="47019760:1291909611.29" startdate="2010-12-09 10:46:00" status="1" subject="PPI Interface">
+<effort id="44897264:1291909622.08" start="2010-12-09 10:44:33" status="1" stop="2010-12-09 11:00:03"/>
+</task>
+</task>
+</task>
+<task expandedContexts="('taskviewer',)" id="43740080:1291921261.75" startdate="2010-11-30 11:43:00" status="1" subject="3.0">
+<task expandedContexts="('prerequisiteviewerintaskeditor2', 'taskviewer')" id="45825392:1291135384.74" startdate="2010-11-30 11:43:00" status="1" subject="ERX-46555 - real time outbound PPI">
+<description>
+Modify outbound PPI messaging (refill requests) to use real time communication server.
+</description>
+<task id="45887664:1291135458.22" startdate="2010-11-30 11:44:00" status="1" subject="Do we care if we receive a RefillResponse message if the Contact Event status is still &quot;initiate request&quot;"/>
+<task id="45826032:1291135489.2" startdate="2010-11-30 11:44:00" status="1" subject="what should the be value for a PPI_MESSAGE.PROCESSED_CODE for a RefillRequest that receives an error"/>
+<task id="45888048:1291135503.61" startdate="2010-11-30 11:45:00" status="1" subject="value of PPI_MESSAGE.PROCESSED_CODE for a refill request that has not been acknowledged"/>
+<task id="46243472:1291135518.19" startdate="2010-11-30 11:45:00" status="1" subject="do control messages need to consider store closing?"/>
+<task id="45964176:1291135531.74" startdate="2010-11-30 11:45:00" status="1" subject="what should happen when we get a control message where the related message is not found"/>
+<task id="45993648:1291135553.42" startdate="2010-11-30 11:45:00" status="1" subject="EnterpriseRx should not respond with a status message forwarded by the JMS proxy"/>
+<task expandedContexts="('taskviewer',)" id="46274768:1291135568.21" startdate="2010-11-30 11:46:00" status="1" subject="honor lock on WF item with Status or Error message is received.">
+<note id="50508144:1291992304.64" status="1" subject="Notes">
+<description>
+11/9/10 18:58
+current implementation error message processing only adds contact event history entry.  Does not effect contact event.  Therefore optimizing lock error does not occur.  This will be a problem if the change contact method when and error occurs.
+
+11/9/10 18:39
+current implementation of status and error messages do consider if contact event is locked.  Normally this is not a problem but has the potential to become one in this case. 
+
+if the user follows item to contact manager, the status or error message will come in while the user has the item open.  The contact event will be updated, and the user will hit an optomistic locking error when they try to update the item in contact manager.
+
+This is theory.  Have not reproduced the problem yet.
+
+If I can reproduce it, control message processing code will need to enhanced.  Also, query which drives ppi message will need to pick up status and error messages as we'll.
+
+Finally, I believe the ppi_message.processed_code column is null / unprocessed for these message types.  We will need a delta to set the value to something else so that they don't get processed.
+
+We normally don't persist these messages.  This is another change to the control message processing.
+</description>
+</note>
+</task>
+<task id="45862064:1291135599.75" startdate="2010-11-30 11:46:00" status="1" subject="we will now be writting all status and error messages to database"/>
+<task id="45993776:1291136019.34" startdate="2010-11-30 11:53:00" status="1" subject="verify error message chanages contact method">
+<description>
+item is still in contact manager
+status of contact event is initiate request or awaiting reply
+contact event is not locked
+
+
+</description>
+<effort id="51873840:1291141619.22" start="2010-11-30 13:26:59" status="1" stop="2010-11-30 15:36:05"/>
+<effort id="52234000:1291149398.41" start="2010-11-30 15:36:38" status="1" stop="2010-11-30 15:53:25"/>
+<effort id="51799888:1291153035.4" start="2010-11-30 16:15:15" status="1" stop="2010-11-30 19:00:00"/>
+</task>
+<task id="49400880:1291136228.53" startdate="2010-11-30 11:57:00" status="1" subject="define behavior for error when contact event resolved"/>
+<task id="47231888:1291141562.5" startdate="2010-11-30 13:26:00" status="1" subject="define behavior for error when contact event locked"/>
+<task id="47920048:1291992380.59" startdate="2010-12-10 09:46:00" status="1" subject="asynch error message needs to change the contact method on a contact event">
+<description>
+11/9/10 18:49
+asynch error message needs to change the contact method on a contact event IFF
+1) status still initiate request
+2) item still in contact a manager
+3) contact event not lock
+</description>
+</task>
+<effort id="50508592:1291992263.75" start="2010-12-10 09:38:09" status="1" stop="2010-12-10 10:21:24"/>
+</task>
+<effort id="44842160:1291930248.49" start="2010-12-09 16:16:18" status="1" stop="2010-12-09 17:28:17"/>
+<effort id="46218256:1291987021.2" start="2010-12-10 08:17:01" status="1" stop="2010-12-10 08:18:23"/>
+<effort id="47919984:1291987150.84" start="2010-12-10 08:19:10" status="1" stop="2010-12-10 08:20:02"/>
+<effort id="54868848:1291994854.76" start="2010-12-10 10:27:34" status="1" stop="2010-12-10 13:51:45"/>
+</task>
+<task completiondate="2010-12-08 23:59:00" id="44811184:1291736130.53" percentageComplete="100" startdate="2010-12-07 10:35:00" status="1" subject="ERX-46950 - LTC / PPI integration">
+<effort id="48976688:1291736152.37" start="2010-12-07 10:35:52" status="1" stop="2010-12-07 11:37:54"/>
+<effort id="49347120:1291741490.83" start="2010-12-07 12:04:50" status="1" stop="2010-12-07 12:27:13"/>
+<effort id="51072976:1291745557.1" start="2010-12-07 13:12:37" status="1" stop="2010-12-07 17:50:53"/>
+<effort id="48912048:1291826004.8" start="2010-12-08 11:17:19" status="1" stop="2010-12-08 11:40:16"/>
+<effort id="49611312:1291826421.08" start="2010-12-08 11:40:21" status="1" stop="2010-12-08 11:46:17"/>
+<effort id="49403088:1291994704.53" start="2010-12-10 10:21:24" status="1" stop="2010-12-10 10:26:41"/>
+</task>
+<task completiondate="2010-12-06 14:30:54.720000" id="47217424:1291390731.21" percentageComplete="100" startdate="2010-12-03 10:38:00" status="1" subject="ERX-47007 - PPI_MESSAGE record created with wrong facility_num">
+<task completiondate="2010-12-06 14:30:54.720000" id="47692432:1291390999.95" percentageComplete="100" startdate="2010-12-03 10:43:00" status="1" subject="merge code changes into 2.3 branch">
+<effort id="47905296:1291391021.49" start="2010-12-03 10:43:41" status="1" stop="2010-12-03 12:45:43"/>
+</task>
+<task completiondate="2010-12-06 14:30:50.451000" duedate="2010-12-06 15:00:00" id="50569264:1291657010.95" percentageComplete="100" startdate="2010-12-06 12:36:00" status="1" subject="test in QA environment">
+<description>
+Himanshu wants me to test in QA data hiding
+</description>
+<effort id="49607664:1291660644.91" start="2010-12-06 13:37:24" status="1" stop="2010-12-06 14:30:49"/>
+</task>
+<effort id="51411152:1291991568.23" start="2010-12-10 09:32:48" status="1" stop="2010-12-10 09:38:09">
+<description>
+conversation with Ryan about how to test
+</description>
+</effort>
+</task>
+<task id="47805744:1291404740.54" startdate="2010-12-03 14:30:00" status="1" subject="Meetings">
+<task expandedContexts="('taskviewer',)" id="44914032:1291404761.41" startdate="2010-12-03 14:30:00" status="1" subject="Interface">
+<task completiondate="2010-12-09 15:00:00" id="49089936:1291404783.62" percentageComplete="100" startdate="2010-12-03 14:30:00" status="1" subject="daily scrum">
+<effort id="50670896:1291404807.03" start="2010-12-03 14:33:27" status="1" stop="2010-12-03 15:05:14"/>
+<effort id="44835056:1291664898.98" start="2010-12-06 14:30:00" status="1" stop="2010-12-06 14:45:19"/>
+<effort id="56064752:1291924940.3" start="2010-12-09 14:30:00" status="1" stop="2010-12-09 15:00:00"/>
+</task>
+<effort id="44150160:1291739882.21" start="2010-12-07 11:30:00" status="1" stop="2010-12-07 12:04:46">
+<description>
+SureScripts security changes
+</description>
+</effort>
+<effort id="48912368:1291824291.53" start="2010-12-08 11:04:20" status="1" stop="2010-12-08 11:17:19">
+<description>
+review scheduled issues for 3.1
+</description>
+</effort>
+</task>
+</task>
+<task completiondate="2010-12-06 14:52:34.879000" id="44865136:1291664926.76" percentageComplete="100" startdate="2010-12-06 14:48:00" status="1" subject="ERX-39897 - message from prescriber date wrong">
+<effort id="47199632:1291664974.29" start="2010-12-06 14:45:19" status="1" stop="2010-12-06 14:52:31"/>
+</task>
+<category categorizables="45964176:1291135531.74 45862064:1291135599.75 46243472:1291135518.19 45826032:1291135489.2 45887664:1291135458.22 45888048:1291135503.61" id="47234064:1291135631.53" status="1" subject="conversation"/>
+<note id="45010448:1291232130.83" status="1" subject="possible solutions">
+<description>
+* change behavior of message processing when product is in this state.  will require new new reqiurements and excpetion message.
+* fix bug in Data Entry when this happens
+</description>
+</note>
+<syncmlconfig>
+<TaskCoach-0000012c9da94d4321a2d438000a00030007003c>
+<spds>
+<sources>
+<TaskCoach-0000012c9da94d4321a2d438000a00030007003c.Tasks/>
+<TaskCoach-0000012c9da94d4321a2d438000a00030007003c.Notes/>
+</sources>
+<syncml>
+<Auth/>
+<Conn/>
+</syncml>
+</spds>
+</TaskCoach-0000012c9da94d4321a2d438000a00030007003c>
+</syncmlconfig>
+<guid>
+0000012c9da94d4321a2d438000a00030007003c
+</guid>
+</tasks>
