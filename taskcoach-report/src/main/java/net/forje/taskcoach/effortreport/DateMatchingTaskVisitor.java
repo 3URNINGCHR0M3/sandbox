@@ -25,11 +25,11 @@ public class DateMatchingTaskVisitor
     protected boolean isMatch(final EffortType effort) {
         
         final String startValue = effort.getStart();
-        final String stopValue = effort.getStop();
 
         final String s1 = startValue.substring(0, 10);
 
         boolean isReportDate = false;
+
         try {
             final Date startDate = DATE_FORMATTER.parse(s1);
             isReportDate = DATE_FORMATTER.format(startDate).equals(DATE_FORMATTER.format(_reportDate));

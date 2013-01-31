@@ -17,12 +17,13 @@ public class AutoHotKeyEffortReport
         implements FileProvider {
 
     public static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
-    private static final String CLIENT = "client";
-    private static final String PROJECT = "project";
-    private static final String PHASE = "phase";
-    private static final String ACTIVITY = "activity";
-    private static final String TASK = "task";
-    private static final String DETAILS = "details";
+
+    protected static final String CLIENT = "client";
+    protected static final String PROJECT = "project";
+    protected static final String PHASE = "phase";
+    protected static final String ACTIVITY = "activity";
+    protected static final String TASK = "task";
+    protected static final String DETAILS = "details";
 
     public AutoHotKeyEffortReport(final TaskVisitor visitor) {
         super(visitor);

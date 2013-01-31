@@ -1,12 +1,10 @@
 package net.forje.taskcoach.effortreport;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 public class Accumulators {
 
-    private static Map<String, Accumulator> ACCUMULATORS = new HashMap<String, Accumulator>() ;
+    private static Map<String, Accumulator> ACCUMULATORS = new TreeMap<String, Accumulator>() ;
 
     public static synchronized Accumulator get(final String name) {
 
@@ -26,5 +24,6 @@ public class Accumulators {
     public static Iterator accumulators() {
         return ACCUMULATORS.values().iterator();
     }
+
 
 }

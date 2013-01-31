@@ -17,6 +17,8 @@ import java.util.Date;
 public class App {
 
     private static final String REPORT_DATE = "reportDate";
+    private static final String START_DATE = "startDate";
+    private static final String END_DATE = "endDate";
     private static final String REPORT_CLASS = "report";
     private static final String VISITOR_CLASS = "visitor";
     private static final String MATCH = "match";
@@ -31,11 +33,7 @@ public class App {
 
         final CommandLineParser parser = new PosixParser();
 
-        String fileNameValue = null;
-        String dateValue = null;
-        String match = null;
-        String className = null;
-        String visitorClassName = null;
+        final Arguments arguments = new Arguments();
 
 
         try {
@@ -47,35 +45,42 @@ public class App {
             }
 
             if (cmd.hasOption(INPUT_FILE)) {
-                fileNameValue = cmd.getOptionValue(INPUT_FILE);
+                arguments._fileNameValue = cmd.getOptionValue(INPUT_FILE);
             }
 
             if (cmd.hasOption(REPORT_DATE)) {
-                dateValue = cmd.getOptionValue(REPORT_DATE);
+                arguments._reportDate = getDate(cmd.getOptionValue(REPORT_DATE));
             }
 
             if (cmd.hasOption(REPORT_CLASS)) {
-                className = cmd.getOptionValue(REPORT_CLASS);
+                arguments._className = cmd.getOptionValue(REPORT_CLASS);
             }
 
             if (cmd.hasOption(MATCH)) {
-                match = cmd.getOptionValue(MATCH);
+                arguments._match = cmd.getOptionValue(MATCH);
             }
 
             if (cmd.hasOption(VISITOR_CLASS)) {
-                visitorClassName = cmd.getOptionValue(VISITOR_CLASS);
+                arguments._visitorClassName = cmd.getOptionValue(VISITOR_CLASS);
+            }
+
+            if (cmd.hasOption(START_DATE)) {
+                arguments._startDateValue = getDate(cmd.getOptionValue(START_DATE));
+            }
+
+            if (cmd.hasOption(END_DATE)) {
+                arguments._endDateValue = getDate(cmd.getOptionValue(END_DATE));
             }
 
 
-            Date date = null;
-            if (!Strings.isEmpty(dateValue)) {
-                date = getDate(dateValue);
+            if (arguments._fileNameValue == null) {
+                displayHelp(options);
+                System.exit(1);
             }
 
-            final TaskVisitor visitor = buildVisitorInstance(visitorClassName, date, match);
-            final EffortReport effortReport = buildReportInstance(className, visitor);
-            System.out.println("processing file");
-            process(fileNameValue, date, effortReport);
+            final TaskVisitor visitor = buildVisitorInstance(arguments);
+            final EffortReport effortReport = buildReportInstance(arguments._className, visitor);
+            process(arguments._fileNameValue, arguments._reportDate, effortReport);
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -83,6 +88,16 @@ public class App {
             displayHelp(options);
         }
 
+    }
+
+    private static class Arguments {
+        String _fileNameValue = null;
+        Date _reportDate = null;
+        Date _startDateValue = null;
+        Date _endDateValue = null;
+        String _match = null;
+        String _className = null;
+        String _visitorClassName = null;
     }
 
     private static EffortReport buildReportInstance(final String className,
@@ -149,21 +164,22 @@ public class App {
 
     }
 
-    private static TaskVisitor buildVisitorInstance(final String visitorClassName,
-                                                    final Date date,
-                                                    final String match)
+    private static TaskVisitor buildVisitorInstance(final Arguments arguments)
             throws Exception {
 
-        final Class<?> visitorClass = getVisitorClass(visitorClassName);
+        final Class<?> visitorClass = getVisitorClass(arguments._visitorClassName);
 
         TaskVisitor visitor = null;
 
-        if (date != null) {
+        if (arguments._reportDate != null) {
             final Constructor<?> constructor = visitorClass.getConstructor(Date.class);
-            visitor = (TaskVisitor) constructor.newInstance(date);
-        } else if (!Strings.isEmpty(match)) {
+            visitor = (TaskVisitor) constructor.newInstance(arguments._reportDate);
+        } else if (!Strings.isEmpty(arguments._match)) {
             final Constructor<?> constructor = visitorClass.getConstructor(String.class);
-            visitor = (TaskVisitor) constructor.newInstance(match);
+            visitor = (TaskVisitor) constructor.newInstance(arguments._match);
+        } else if (arguments._endDateValue != null && arguments._startDateValue != null ) {
+            final Constructor<?> constructor = visitorClass.getConstructor(Date.class,Date.class);
+            visitor = (TaskVisitor) constructor.newInstance(arguments._startDateValue , arguments._endDateValue);
         }
 
         return visitor;
@@ -245,6 +261,18 @@ public class App {
                 .withDescription("date to report on format : mm/dd/yyyy")
                 .create(REPORT_DATE);
 
+        Option startDate = OptionBuilder.isRequired(false)
+                .withArgName("start")
+                .hasArg()
+                .withDescription("date to start the report on; format : mm/dd/yyyy")
+                .create(START_DATE);
+
+        Option endDate = OptionBuilder.isRequired(false)
+                .withArgName("end")
+                .hasArg()
+                .withDescription("date to end the report on; format : mm/dd/yyyy")
+                .create(END_DATE);
+
         Option match = OptionBuilder.isRequired(false)
                 .withArgName("match")
                 .hasArg()
@@ -270,6 +298,8 @@ public class App {
 
         options.addOption(file);
         options.addOption(date);
+        options.addOption(startDate);
+        options.addOption(endDate);
         options.addOption(report);
         options.addOption(match);
         options.addOption(visitor);

@@ -1,5 +1,6 @@
 package net.forje.taskcoach.effortreport;
 
+
 import net.forje.taskcoach.jaxb.EffortType;
 import net.forje.taskcoach.jaxb.TaskType;
 import net.forje.taskcoach.types.Strings;
@@ -73,7 +74,7 @@ public abstract class AbstractTaskVisitor implements TaskVisitor {
 
 
         if (isMatch) {
-//            System.out.println("taskName [" + taskName +"]");
+
             try {
 
                 final String taskPath = buffer.toString();
@@ -103,6 +104,8 @@ public abstract class AbstractTaskVisitor implements TaskVisitor {
                         matcher.find(0);
                         final String jiraKey = matcher.group(1);
                         scrape.setProperty("details", jiraKey);
+                        scrape.setProperty(PropertyNames.JiraKey.toString(), jiraKey);
+
                     } else {
                         if (!Strings.isEmpty(effortDescription)) {
                             scrape.setProperty("details", effortDescription);
