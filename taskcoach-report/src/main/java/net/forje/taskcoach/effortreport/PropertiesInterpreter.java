@@ -32,8 +32,9 @@ public class PropertiesInterpreter {
     public boolean isReleaseRelated() {
 
         final String client = getString(AutoHotKeyEffortReport.CLIENT);
+        final String project = getString(AutoHotKeyEffortReport.PROJECT);
 
-        return "00807424".equals(client);
+        return "00807424".equals(client) && (!"SEEC__.DEV".equalsIgnoreCase(project));
 
     }
 
@@ -48,4 +49,24 @@ public class PropertiesInterpreter {
     public String getJIRAKey() {
         return getString(PropertyNames.JiraKey.toString());
     }
+
+    public String getCustomer() {
+        return getString(PropertyNames.Customer.toString());
+    }
+
+    public boolean isCertification() {
+        return "CERTIFTEST".equals(getString(PropertyNames.Activity.toString()));
+    }
+
+    public String getVendor() {
+        return getString(PropertyNames.Vendor.toString());
+    }
+
+
+    public String getComponent() {
+        return getString(PropertyNames.Component.toString());
+    }
+
+
+
 }

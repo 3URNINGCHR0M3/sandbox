@@ -6,7 +6,7 @@ import org.junit.Test;
 import javax.print.DocFlavor;
 import java.util.Properties;
 
-public class PropertyStackTack {
+public class PropertyStackTest {
 
     private final static String ALPHA = "alpha";
     private final static String BETA = "beta";

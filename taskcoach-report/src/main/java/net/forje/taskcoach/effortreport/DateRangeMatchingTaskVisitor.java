@@ -42,6 +42,11 @@ public class DateRangeMatchingTaskVisitor
             match = false;
         }
 
+        if (match) {
+            final String description = effort.getDescription();
+            System.out.println(description);
+        }
+
         return match;
 
     }

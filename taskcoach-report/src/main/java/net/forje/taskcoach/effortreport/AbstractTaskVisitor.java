@@ -117,6 +117,10 @@ public abstract class AbstractTaskVisitor implements TaskVisitor {
 
                 accumulator.setProperties(scrape);
 
+                if (!Strings.isEmpty(effortDescription)) {
+                    accumulator.addEffortComment(effortDescription);
+                }
+
             } catch (ParseException
                     e) {
                 e.printStackTrace();

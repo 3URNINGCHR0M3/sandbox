@@ -68,8 +68,6 @@ public class AutoHotKeyEffortReport
 
         final Iterator iterator = Accumulators.accumulators();
 
-//        final Pattern pattern = Pattern.compile("ERX-\\d+");
-
         while (iterator.hasNext()) {
 
             Accumulator accumulator = (Accumulator) iterator.next();
@@ -86,12 +84,12 @@ public class AutoHotKeyEffortReport
 
             final Properties properties = accumulator.getProperties();
 
-            final String client = properties.getProperty(CLIENT);
-            final String project = properties.getProperty(PROJECT);
-            final String phase = properties.getProperty(PHASE);
-            final String activity = properties.getProperty(ACTIVITY);
-            final String task = properties.getProperty(TASK);
-            final String details = properties.getProperty(DETAILS);
+            final String client = properties.getProperty(PropertyNames.Customer.toString());
+            final String project = properties.getProperty(PropertyNames.Project.toString());
+            final String phase = properties.getProperty(PropertyNames.Phase.toString());
+            final String activity = properties.getProperty(PropertyNames.Activity.toString());
+            final String task = properties.getProperty(PropertyNames.Task.toString());
+            final String details = properties.getProperty(PropertyNames.Details.toString());
 
             ArrayList missing = new ArrayList(5);
 
