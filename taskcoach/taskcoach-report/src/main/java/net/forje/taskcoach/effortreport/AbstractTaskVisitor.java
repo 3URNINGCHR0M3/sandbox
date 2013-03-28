@@ -95,11 +95,11 @@ public abstract class AbstractTaskVisitor implements TaskVisitor {
                 final Properties scrape = _propertyStack.scrape();
                 final String details = scrape.getProperty("details");
 
+                final Pattern pattern = Pattern.compile(".*(ERX-\\d+).*");
+
+
                 if (Strings.isEmpty(details)) {
-
-                    final Pattern pattern = Pattern.compile("(ERX-\\d+).*");
                     final Matcher matcher = pattern.matcher(taskName);
-
                     if (matcher.matches()) {
                         matcher.find(0);
                         final String jiraKey = matcher.group(1);
@@ -113,7 +113,24 @@ public abstract class AbstractTaskVisitor implements TaskVisitor {
                             scrape.setProperty("details", taskName);
                         }
                     }
+                } else {
+                    final Matcher matcher = pattern.matcher(details);
+                    if (matcher.matches()) {
+                        matcher.find(0);
+                        final String jiraKey = matcher.group(1);
+                        scrape.setProperty(PropertyNames.JiraKey.toString(), jiraKey);
+                    }
                 }
+
+                if (scrape.getProperty(PropertyNames.JiraKey.toString()) == null) {
+                    final Matcher matcher = pattern.matcher(accumulator.getName());
+                    if (matcher.matches()) {
+                        matcher.find(0);
+                        final String jiraKey = matcher.group(1);
+                        scrape.setProperty(PropertyNames.JiraKey.toString(), jiraKey);
+                    }
+                }
+
 
                 accumulator.setProperties(scrape);
 

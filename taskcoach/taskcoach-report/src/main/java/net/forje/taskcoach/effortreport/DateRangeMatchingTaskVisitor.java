@@ -44,7 +44,7 @@ public class DateRangeMatchingTaskVisitor
 
         if (match) {
             final String description = effort.getDescription();
-            System.out.println(description);
+//            System.out.println(description);
         }
 
         return match;

@@ -43,7 +43,15 @@ public class StatusReport extends AbstractEffortReport {
             out.println(name);
             final Iterator effortComments = accumulator.getEffortComments();
             while (effortComments.hasNext()) {
+
                 String comment = (String) effortComments.next();
+
+                if (Strings.isEmpty(comment)) {
+                    continue;
+                }
+
+                comment = comment.replaceAll("(\\r|\\n)", ";");
+
                 out.println("   " + comment);
             }
         }
@@ -87,12 +95,14 @@ public class StatusReport extends AbstractEffortReport {
                 if (!Strings.isEmpty(jiraKey)) {
                     out.print("   " + jiraKey);
 
-                     final String component = interpreter.getComponent();
-                     if (!Strings.isEmpty(component)) {
-                         out.print(" - " + component);
-                     }
+                    final String component = interpreter.getComponent();
+                    if (!Strings.isEmpty(component)) {
+                        out.print(" - " + component);
+                    }
 
-                     out.println();
+                    out.println();
+                } else {
+                    out.println(accumulator.getName());
                 }
 
             }
@@ -218,7 +228,12 @@ public class StatusReport extends AbstractEffortReport {
                     final Iterator effortComments = accumulator.getEffortComments();
                     while (effortComments.hasNext()) {
                         String comment = (String) effortComments.next();
-                        out.println("       " + comment);
+
+                        if (Strings.isEmpty(comment)) {
+                            continue;
+                        }
+
+                        comment = comment.replaceAll("(\\r|\\n)", ";");
                     }
 
                 }
@@ -252,7 +267,7 @@ public class StatusReport extends AbstractEffortReport {
                 final String release = interpreter.getRelease();
 
                 if (Strings.isEmpty(release)) {
-                    throw new RuntimeException("Found release related element w/o a release [" + accumulator.getName() +"]");
+                    throw new RuntimeException("Found release related element w/o a release [" + accumulator.getName() + "]");
                 }
 
                 if (_releases.containsKey(release)) {
