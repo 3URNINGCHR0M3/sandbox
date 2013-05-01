@@ -43,7 +43,10 @@ public class TaskReportIterator {
         visitor.enterTask(task);
 
         final List<EffortType> effortList = task.getEffort();
+
+        visitor.processingEffort(task);
         processEfforts(visitor, effortList);
+        visitor.processedEffort(task);
 
         final List<TaskType> taskList = task.getTask();
         processTasks(visitor, taskList);

@@ -48,12 +48,12 @@ public class Purger {
 
 
         @Override
-        public void enteringTask(final TaskType task) {
+        public void processingEffort(TaskType task) {
             _effortToBeDeleted.clear();
         }
 
         @Override
-        public void leavingTask(final TaskType task) {
+        public void processedEffort(TaskType task) {
             List<EffortType> effortList = task.getEffort();
             for (Iterator iterator = _effortToBeDeleted.iterator(); iterator.hasNext(); ) {
                 EffortType next = (EffortType) iterator.next();

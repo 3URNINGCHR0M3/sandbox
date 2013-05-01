@@ -23,6 +23,17 @@ public interface TaskVisitor {
     void leaveTask(TaskType task);
 
     /**
+     * Called before processing list of Effort nodes
+     */
+    public void processingEffort(TaskType task);
+
+
+    /**
+     * Called after all Effort nodes have been processed
+     */
+    public void processedEffort(TaskType task);
+
+    /**
      * Called on each effort node
      */
     void processEffort(EffortType effort);

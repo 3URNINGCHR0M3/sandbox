@@ -55,6 +55,14 @@ public abstract class AbstractTaskVisitor implements TaskVisitor {
 
     }
 
+    public void processingEffort(TaskType task) {
+
+    }
+
+    public void processedEffort(TaskType task) {
+
+    }
+
     public void processEffort(EffortType effort) {
 
         StringBuffer buffer = new StringBuffer();
