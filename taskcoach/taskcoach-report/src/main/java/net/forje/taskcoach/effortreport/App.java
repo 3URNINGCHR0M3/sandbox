@@ -18,14 +18,14 @@ public class App {
 
     private static final String REPORT_DATE = "reportDate";
     private static final String START_DATE = "startDate";
-    private static final String END_DATE = "endDate";
+    public static final String END_DATE = "endDate";
     private static final String REPORT_CLASS = "report";
     private static final String VISITOR_CLASS = "visitor";
     private static final String MATCH = "match";
-    private static final String INPUT_FILE = "inputFile";
+    public static final String INPUT_FILE = "inputFile";
     private static final String HELP = "help";
 
-    private static final DateFormat FORMATTER = new SimpleDateFormat("MM/dd/yyyy");
+    public static final DateFormat FORMATTER = new SimpleDateFormat("MM/dd/yyyy");
 
     public static void main(String[] args) {
 
@@ -40,7 +40,7 @@ public class App {
             CommandLine cmd = parser.parse(options, args);
 
             if (cmd.hasOption(HELP)) {
-                displayHelp(options);
+                displayHelp(options, "App");
                 return;
             }
 
@@ -74,7 +74,7 @@ public class App {
 
 
             if (arguments._fileNameValue == null) {
-                displayHelp(options);
+                displayHelp(options, "App");
                 System.exit(1);
             }
 
@@ -85,7 +85,7 @@ public class App {
         } catch (Exception e) {
             System.out.println(e.getMessage());
             e.printStackTrace();
-            displayHelp(options);
+            displayHelp(options, "App");
         }
 
     }
@@ -224,7 +224,7 @@ public class App {
         return date;
     }
 
-    private static void backupFile(final File file) throws Exception {
+    public static void backupFile(final File file) throws Exception {
 
         final DateFormat format = new SimpleDateFormat("yyyyMMddHHmmss");
 
@@ -309,9 +309,10 @@ public class App {
 
     }
 
-    private static void displayHelp(Options options) {
+    public static void displayHelp(final Options options,
+                                   final String appClassName) {
         HelpFormatter formatter = new HelpFormatter();
-        formatter.printHelp("App", options);
+        formatter.printHelp(appClassName, options);
     }
 
 }

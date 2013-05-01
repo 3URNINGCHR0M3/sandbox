@@ -43,8 +43,16 @@ public abstract class AbstractTaskVisitor implements TaskVisitor {
         _currentTask = null;
     }
 
-    protected TaskType getCurrentTask() {
+    protected final TaskType getCurrentTask() {
         return _currentTask;
+    }
+
+    public void enteringTask(TaskType task) {
+
+    }
+
+    public void leavingTask(TaskType task) {
+
     }
 
     public void processEffort(EffortType effort) {

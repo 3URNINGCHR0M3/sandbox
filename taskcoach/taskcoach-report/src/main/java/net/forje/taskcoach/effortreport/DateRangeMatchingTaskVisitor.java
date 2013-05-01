@@ -35,16 +35,12 @@ public class DateRangeMatchingTaskVisitor
 
         try {
             final Date effortStart = DATE_FORMATTER.parse(startValue);
-            match = (effortStart.after(_startDate) || effortStart.equals(_startDate));
+            match = (effortStart.after(_startDate) || effortStart.equals(_startDate))
+                    && (effortStart.before(_endDate) || effortStart.equals(_endDate));
 
         } catch (Exception e) {
             e.printStackTrace();
             match = false;
-        }
-
-        if (match) {
-            final String description = effort.getDescription();
-//            System.out.println(description);
         }
 
         return match;
