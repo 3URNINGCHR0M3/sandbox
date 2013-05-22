@@ -1,6 +1,5 @@
 package net.forje.taskcoach.effortreport;
 
-import com.sun.deploy.util.SyncFileAccess;
 import net.forje.taskcoach.jaxb.Tasks;
 
 import javax.xml.bind.JAXBContext;
