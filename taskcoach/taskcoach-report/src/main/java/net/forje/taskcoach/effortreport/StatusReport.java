@@ -41,19 +41,7 @@ public class StatusReport extends AbstractEffortReport {
             Accumulator accumulator = (Accumulator) iterator.next();
             final String name = accumulator.getName();
             out.println(name);
-            final Iterator effortComments = accumulator.getEffortComments();
-            while (effortComments.hasNext()) {
-
-                String comment = (String) effortComments.next();
-
-                if (Strings.isEmpty(comment)) {
-                    continue;
-                }
-
-                comment = comment.replaceAll("(\\r|\\n)", ";");
-
-                out.println("   " + comment);
-            }
+            dumpEffortDetails(accumulator, out);
         }
 
     }
@@ -104,6 +92,8 @@ public class StatusReport extends AbstractEffortReport {
                 } else {
                     out.println(accumulator.getName());
                 }
+
+                dumpEffortDetails(accumulator, out);
 
             }
 
@@ -176,6 +166,8 @@ public class StatusReport extends AbstractEffortReport {
 
                 }
 
+                dumpEffortDetails(accumulator, out);
+
             }
 
             if (customers.hasNext()) {
@@ -225,18 +217,13 @@ public class StatusReport extends AbstractEffortReport {
 
                     out.println();
 
-                    final Iterator effortComments = accumulator.getEffortComments();
-                    while (effortComments.hasNext()) {
-                        String comment = (String) effortComments.next();
 
-                        if (Strings.isEmpty(comment)) {
-                            continue;
-                        }
-
-                        comment = comment.replaceAll("(\\r|\\n)", ";");
-                    }
-
+                } else {
+                    String name = accumulator.getName();
+                    out.println(name);
                 }
+
+                dumpEffortDetails(accumulator, out);
 
             }
 
@@ -246,6 +233,20 @@ public class StatusReport extends AbstractEffortReport {
 
         }
 
+    }
+
+    private void dumpEffortDetails(final Accumulator accumulator, final PrintStream out) {
+        final Iterator effortComments = accumulator.getEffortComments();
+        while (effortComments.hasNext()) {
+            String comment = (String) effortComments.next();
+
+            if (Strings.isEmpty(comment)) {
+                continue;
+            }
+
+            comment = comment.replaceAll("(\\r|\\n)", ";");
+            out.println("   " + comment);
+        }
     }
 
     private void processAccumulatedData() {
