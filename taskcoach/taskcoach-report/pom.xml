@@ -20,7 +20,7 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>taskcoach-jaxb</groupId>
+            <groupId>net.forje</groupId>
             <artifactId>taskcoach-jaxb</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
