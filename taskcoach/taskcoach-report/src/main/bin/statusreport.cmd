@@ -1,1 +1,1 @@
-java -jar taskcoach-1.0-SNAPSHOT.jar -inputFile "C:/Home/Dropbox/PortableApps/Documents/TaskCoach/taskcoach.tsk"  -visitor DateRangeMatchingTaskVisitor -report StatusReport -startDate %1 -endDate %2
+a
