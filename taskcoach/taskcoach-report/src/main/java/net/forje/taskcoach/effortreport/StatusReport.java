@@ -81,7 +81,7 @@ public class StatusReport extends AbstractEffortReport {
                 interpreter = new PropertiesInterpreter(properties);
                 final String jiraKey = interpreter.getJIRAKey();
                 if (!Strings.isEmpty(jiraKey)) {
-                    out.print("   " + jiraKey);
+                    out.print(jiraKey);
 
                     final String component = interpreter.getComponent();
                     if (!Strings.isEmpty(component)) {
@@ -144,7 +144,6 @@ public class StatusReport extends AbstractEffortReport {
                     final String vendor = interpreter.getVendor();
 
                     StringBuilder builder = new StringBuilder(100);
-                    builder.append("   ");
                     builder.append(jiraKey);
                     builder.append(" - ");
 
@@ -208,7 +207,7 @@ public class StatusReport extends AbstractEffortReport {
 
                 final String jiraKey = interpreter.getJIRAKey();
                 if (!Strings.isEmpty(jiraKey)) {
-                    out.print("   " + jiraKey);
+                    out.print(jiraKey);
 
                     final String component = interpreter.getComponent();
                     if (!Strings.isEmpty(component)) {
@@ -245,7 +244,7 @@ public class StatusReport extends AbstractEffortReport {
             }
 
             comment = comment.replaceAll("(\\r|\\n)", ";");
-            out.println("   " + comment);
+            out.println(" * " + comment);
         }
     }
 
