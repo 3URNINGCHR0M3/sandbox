@@ -26,9 +26,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.mck.mps.erx.dev</groupId>
-            <artifactId>erxdev-common-kernel</artifactId>
-            <version>0.2</version>
+            <groupId>net.forje</groupId>
+            <artifactId>forje-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
     <build>

@@ -1,6 +1,6 @@
 package net.forje.tools.xml.diff;
 
-import com.mck.mps.erx.dev.common.types.Strings;
+import net.forje.common.types.Strings;
 import org.w3c.dom.Node;
 
 import javax.xml.namespace.NamespaceContext;
