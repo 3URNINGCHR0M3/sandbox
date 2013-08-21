@@ -15,6 +15,9 @@ public class NodeWrapper {
         _node = node;
     }
 
+    /**
+    * Returns a 1-based index of the node in question within it's parent tag.
+    */
     public int getIndex() {
 
         if (_indexCalculated) {
@@ -36,6 +39,9 @@ public class NodeWrapper {
 
         }
 
+        if (i==0) {
+            i++;
+        }
         _index = i;
         _indexCalculated = true;
 

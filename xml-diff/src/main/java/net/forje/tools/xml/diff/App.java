@@ -70,6 +70,7 @@ public class App {
                 final Object object = pathExpression.evaluate(rhsDoc, XPathConstants.NODE);
 
                 if (object == null) {
+                    System.out.println();
                     System.out.println(expression);
                     System.out.println("no match");
                 } else {
@@ -80,6 +81,7 @@ public class App {
 
             }
 
+            System.out.println();
             System.out.println("totalExpressions = " + totalExpressions);
             System.out.println("matches = " + matches);
 

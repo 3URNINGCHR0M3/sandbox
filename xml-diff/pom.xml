@@ -9,7 +9,11 @@
 
     <name>xml-diff</name>
     <url>http://maven.apache.org</url>
-
+    <scm>
+        <url>https://github.com/3URNINGCHR0M3/sandbox</url>
+        <connection>scm:git:git://github.com/3URNINGCHR0M3/sandbox.git</connection>
+        <developerConnection>scm:git:git@github.com:3URNINGCHR0M3/sandbox.git</developerConnection>
+    </scm>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -28,7 +32,24 @@
         </dependency>
     </dependencies>
     <build>
+        <finalName>${project.artifactId}-${buildNumber}</finalName>
         <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>buildnumber-maven-plugin</artifactId>
+                <version>1.1</version>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>create</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <shortRevisionLength>10</shortRevisionLength>
+                </configuration>
+            </plugin>
             <plugin>
                 <inherited>true</inherited>
                 <groupId>org.apache.maven.plugins</groupId>
