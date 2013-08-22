@@ -10,11 +10,18 @@ import java.util.Map;
 
 public class VisitingNamespaceContext implements NamespaceContext, NodeVisitor {
 
-    private final Map<String,String> _prefixToURIMap = new HashMap<String,String>(10);
-    private final Map<String,String> _uriToPrefixMap = new HashMap<String,String>(10);
+    private final Map<String, String> _prefixToURIMap = new HashMap<String, String>(10);
+    private final Map<String, String> _uriToPrefixMap = new HashMap<String, String>(10);
+
+    private String _defaultNameSpaceURI;
 
     @Override
     public String getNamespaceURI(final String prefix) {
+
+        if (prefix == null || "null".equalsIgnoreCase(prefix)) {
+            return _defaultNameSpaceURI;
+        }
+
         String s = _prefixToURIMap.get(prefix);
         return s;
     }
@@ -26,7 +33,7 @@ public class VisitingNamespaceContext implements NamespaceContext, NodeVisitor {
 
     @Override
     public Iterator getPrefixes(final String namespaceURI) {
-        return null;
+        return _prefixToURIMap.keySet().iterator();
     }
 
     @Override
@@ -39,11 +46,24 @@ public class VisitingNamespaceContext implements NamespaceContext, NodeVisitor {
         final String namespaceURI = node.getNamespaceURI();
         final String prefix = node.getPrefix();
 
-        if (!Strings.isEmpty(namespaceURI) & !Strings.isEmpty(prefix)) {
+        if (!Strings.isEmpty(namespaceURI) && !Strings.isEmpty(prefix)) {
 
             if (!_prefixToURIMap.containsKey(prefix)) {
+                System.out.println("found namespace -> [" + prefix + ":" + namespaceURI + "]");
                 _prefixToURIMap.put(prefix, namespaceURI);
                 _uriToPrefixMap.put(namespaceURI, prefix);
+            }
+
+        } else if (!Strings.isEmpty(namespaceURI) && Strings.isEmpty(prefix)) {
+            // default namespace
+            if (Strings.isEmpty(_defaultNameSpaceURI)) {
+                System.out.println("found default namespace -> [" + namespaceURI + "]");
+                _defaultNameSpaceURI = namespaceURI;
+            } else {
+                if (!_defaultNameSpaceURI.equals(namespaceURI)) {
+                    System.out.println("found ANOTHER default namespace -> [" + namespaceURI + "]");
+                }
+
             }
 
         }
