@@ -32,7 +32,7 @@ public class VisitingNamespaceContext implements NamespaceContext, NodeVisitor {
     @Override
     public void visit(final Node node) {
 
-        if (Node.ELEMENT_NODE != node.getNodeType()) {
+        if (Node.ELEMENT_NODE != node.getNodeType() && Node.ATTRIBUTE_NODE != node.getNodeType()) {
             return;
         }
 
