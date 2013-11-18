@@ -24,7 +24,6 @@ public class NodeComparator {
 
     public void compare() {
 
-
         if (_lhsNode.hasChildNodes() && _rhsNode.hasChildNodes()) {
 
             final NodeList lhsChildren = _lhsNode.getChildNodes();
@@ -61,7 +60,9 @@ public class NodeComparator {
             // assume content of tag checked in LHS to RHS evaluation
             final Set<String> rhsKeys = rhsMap.keySet();
             for (Iterator<String> iterator = rhsKeys.iterator(); iterator.hasNext(); ) {
-                String rhsTagName = iterator.next();
+
+                final String rhsTagName = iterator.next();
+
                 Node rhsNode = rhsMap.get(rhsTagName);
                 if (!lhsMap.containsKey(rhsTagName)) {
                     NodeWrapper nodeWrapper = new NodeWrapper(rhsNode);
@@ -72,7 +73,9 @@ public class NodeComparator {
             }
 
         } else if (!_lhsNode.hasChildNodes() || !_rhsNode.hasChildNodes()) {
+
             // this will check text nodes
+
             final String lhsValue = _lhsNode.getTextContent().trim();
             final String rhsValue = _rhsNode.getTextContent().trim();
 

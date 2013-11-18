@@ -5,7 +5,6 @@
     </formats>
     <dependencySets>
         <dependencySet>
-            <!--<scope>compile</scope>-->
             <includes>
                 <include>*:*</include>
             </includes>
