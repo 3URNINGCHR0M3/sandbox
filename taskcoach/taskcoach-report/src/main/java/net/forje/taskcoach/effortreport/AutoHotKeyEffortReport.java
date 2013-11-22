@@ -84,7 +84,7 @@ public class AutoHotKeyEffortReport
 
             final Properties properties = accumulator.getProperties();
 
-            final String client = properties.getProperty(PropertyNames.Customer.toString());
+            final String client = properties.getProperty(PropertyNames.Client.toString());
             final String project = properties.getProperty(PropertyNames.Project.toString());
             final String phase = properties.getProperty(PropertyNames.Phase.toString());
             final String activity = properties.getProperty(PropertyNames.Activity.toString());
@@ -130,7 +130,7 @@ public class AutoHotKeyEffortReport
 
         out.println("BREAK");
         out.println("!c");
-        
+
     }
 
     private void checkProperties(final Properties properties, final ArrayList missing) {

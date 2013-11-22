@@ -17,7 +17,7 @@ else
          else
          {
             SendInput %line%
-	        Sleep 100
+	        Sleep 500
          }
     }
 

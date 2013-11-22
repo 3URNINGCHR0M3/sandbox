@@ -16,7 +16,7 @@ public class Accumulator {
     private List _effortComments = new ArrayList();
 
     private int _accumulator = 0;
-    private int _roundingFactor = 6;
+    private int _roundingFactor = 3;
 
     public Accumulator(String name) {
         _name = name;
@@ -77,5 +77,5 @@ public class Accumulator {
     public void setProperties(final Properties properties) {
         _properties = properties;
     }
-    
+
 }

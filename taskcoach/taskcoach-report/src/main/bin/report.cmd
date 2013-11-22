@@ -4,4 +4,4 @@ set day=%date:~7,2%
 
 @echo %month%/%day%/%year%
 
-java -jar taskcoach-1.0-SNAPSHOT.jar -inputFile "C:/Home/Dropbox/PortableApps/Documents/TaskCoach/taskcoach.tsk" -report DailyTotalReport -reportDate %month%/%day%/%year%
+java -jar taskcoach-report-${version}.jar -inputFile "C:/home/portableapps/Documents/TaskCoach/taskcoach.tsk" -report DailyTotalReport -reportDate %month%/%day%/%year%

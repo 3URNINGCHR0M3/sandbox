@@ -4,14 +4,26 @@
     <formats>
         <format>zip</format>
     </formats>
+    <dependencySets>
+        <dependencySet>
+            <includes>
+                <include>*:*</include>
+            </includes>
+            <excludes>
+                <exclude>${groupId}:${artifactId}</exclude>
+            </excludes>
+            <unpack>false</unpack>
+            <outputDirectory>lib</outputDirectory>
+        </dependencySet>
+    </dependencySets>
     <fileSets>
         <fileSet>
             <directory>src/main/bin</directory>
             <outputDirectory></outputDirectory>
             <filtered>true</filtered>
-            <fileMode>777</fileMode>
             <includes>
-                <include>*</include>
+                <include>*.cmd</include>
+                <include>*.bat</include>
             </includes>
         </fileSet>
         <fileSet>
@@ -24,13 +36,6 @@
         </fileSet>
         <fileSet>
             <directory>target</directory>
-            <outputDirectory></outputDirectory>
-            <includes>
-                <include>*.jar</include>
-            </includes>
-        </fileSet>
-        <fileSet>
-            <directory>target/dependency</directory>
             <outputDirectory></outputDirectory>
             <includes>
                 <include>*.jar</include>
