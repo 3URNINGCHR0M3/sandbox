@@ -14,7 +14,7 @@ public enum TechnologyLevel {
     MicrotechAge (9,"Microtech Age"),
     RoboticAge (10,"Robotic Age"),
     AgeOfExoticMatter (11,"Age of Exotic Matter"),
-    Unrestriced (12, "Unrestricted"); // @todo need to find a better name for this
+    Unrestricted(12, "Unrestricted"); // @todo need to find a better name for this
 
     private int _level;
     private String _name;

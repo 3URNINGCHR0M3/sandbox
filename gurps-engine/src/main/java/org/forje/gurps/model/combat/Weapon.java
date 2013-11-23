@@ -5,5 +5,5 @@ package org.forje.gurps.model.combat;
 * instance related data.
 */
 public interface Weapon {
-
+    public WeaponState getWeaponState();
 }
