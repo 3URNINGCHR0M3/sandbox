@@ -10,6 +10,23 @@ public class WeaponDefinition {
 
     private TechnologyLevel _technologyLevel;
     private String _name;
-
+    private int _weight;
+    private int _reloadWeight;
+    /**
+     * The minumim strength to yeild the weapon
+     */
+    private int _minimumStrength;
+    private int _range;
+    private int _accuracy;
+    private int _accuracyScopeBonus;
+    private int _maximumRange;
+    /**
+     * Attacks at this range or greater (>=) will do only half damage.  May not be defined for all weapons.
+     */
+    private int _maximumEffectiveRange;
+    private int _rateOfFire;
+    private int _shots;
+    private boolean _twohandedLight;
+    private boolean _twohandedHeavy;
 
 }
