@@ -9,6 +9,7 @@ import org.forje.gurps.model.TechnologyLevel;
 public class WeaponDefinition {
 
     private TechnologyLevel _technologyLevel;
+    private WeaponType _weaponType;
     private String _name;
     private int _weight;
     private int _reloadWeight;
