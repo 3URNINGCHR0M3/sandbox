@@ -10,4 +10,7 @@ public interface Randomizer {
 
     public int produceValue();
 
+    public int getMin();
+
+    public int getMax();
 }
