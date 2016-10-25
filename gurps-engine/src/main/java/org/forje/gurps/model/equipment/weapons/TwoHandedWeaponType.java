@@ -1,4 +1,4 @@
-package org.forje.gurps.model.combat;
+package org.forje.gurps.model.equipment.weapons;
 
 public enum TwoHandedWeaponType {
 

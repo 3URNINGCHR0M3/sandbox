@@ -1,6 +1,7 @@
-package org.forje.gurps.model.combat;
+package org.forje.gurps.model.equipment.weapons;
 
 import org.forje.gurps.model.TechnologyLevel;
+import org.forje.gurps.model.equipment.weapons.WeaponType;
 
 /**
  * This class encapsulates the attributes of a weapon.  It is not an actionable class, and instead represents the table

@@ -1,7 +1,9 @@
-package org.forje.gurps.model.combat;
+package org.forje.gurps.model.equipment.weapons;
 
-import java.util.HashMap;
-import java.util.Map;
+import org.forje.gurps.model.combat.DamageType;
+import org.forje.gurps.model.combat.DamageTypeMap;
+import org.forje.gurps.model.combat.MeleeType;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
