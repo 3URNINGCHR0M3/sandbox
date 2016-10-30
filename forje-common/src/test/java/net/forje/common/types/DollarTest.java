@@ -127,8 +127,57 @@ public class DollarTest {
     }
 
     @Test
-    public void testMultiply() throws Exception {
-        fail("test not implemented");
+    public void testMultiplyInt() throws Exception {
+
+        // this test verified that autoboxing a primitive int
+        // resolved to the valueOf(Number) signature.
+
+        final Dollar value = Dollar.valueOf("6.46");
+        final int multiplier = 2;
+        final Dollar result = value.multiply(multiplier);
+
+        final Dollar expected = Dollar.valueOf("12.92");
+
+        Assert.assertEquals(expected, result);
+
+    }
+
+
+    @Test
+    public void testMultiplyByNumber() throws Exception {
+
+        final Dollar value = Dollar.valueOf("10.00");
+
+        Dollar result = value.multiply(new Double(2));
+
+        final Dollar expected = Dollar.valueOf("20.00");
+
+        Assert.assertEquals(expected, result);
+
+    }
+
+
+    @Test
+    public void testMultiplyFractionUsesDefaultRoundingMode() throws Exception {
+
+        final Dollar value = Dollar.valueOf("10.00");
+
+
+
+        Dollar.setDefaultRoundingMode(RoundingMode.HALF_DOWN);
+        final Dollar halfDown = value.multiply(2.0005);
+        Assert.assertEquals("half down", Dollar.valueOf("20.00"), halfDown);
+
+        Dollar.setDefaultRoundingMode(RoundingMode.HALF_UP);
+        final Dollar halfUp = value.multiply(2.0005);
+        Assert.assertEquals("half up",Dollar.valueOf("20.01"), halfUp);
+
+    }
+
+
+    @Test
+    public void testMultiplyFractionSpecifyRoundingMode() throws Exception {
+        Assert.fail("test not implemented");
     }
 
     @Test
@@ -145,10 +194,9 @@ public class DollarTest {
 
     @Test
     public void testIndivisible() throws Exception {
-        Assert.fail("test not implemented");
         // divide 0.02 by 3
         // not sure what it should do
-
+        // probably throw an IllegalStateException
     }
 
     @Test
@@ -234,6 +282,8 @@ public class DollarTest {
         final String stringValue = "8.85";
         final Dollar test = Dollar.valueOf(stringValue);
         Assert.assertEquals(stringValue, test.toString());
+
+        Assert.assertEquals("20.00", Dollar.valueOf("20.00").toString());
 
     }
 

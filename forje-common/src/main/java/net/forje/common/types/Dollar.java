@@ -2,6 +2,7 @@ package net.forje.common.types;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.text.DecimalFormat;
 
 /**
  *
@@ -114,13 +115,38 @@ public class Dollar implements Comparable<Dollar> {
         if (_toString == null) {
             final BigDecimal bigDecimal = new BigDecimal(_cents);
             final BigDecimal result = bigDecimal.divide(ONE_HUNDRED);
-            _toString = result.toString();
+            DecimalFormat myFormatter = new DecimalFormat("0.00");
+            _toString = myFormatter.format(result);
         }
 
         return _toString;
 
     }
 
+    public Dollar multiply(final Number multiplier) {
 
+        final BigDecimal multiplierBd = new BigDecimal(multiplier.doubleValue());
+
+        System.out.println("multiplierBd = " + multiplierBd);
+
+        final BigDecimal currentValue = new BigDecimal(_cents).multiply(BigDecimal.TEN)
+                .setScale(0, defaultRoundingMode);
+        System.out.println("currentValue = " + currentValue);
+
+        final BigDecimal result = multiplierBd.multiply(currentValue)
+                .setScale(0, defaultRoundingMode);
+        System.out.println("result = " + result);
+
+        final BigDecimal working = result.divide(BigDecimal.TEN)
+                .setScale(0, defaultRoundingMode);
+
+        System.out.println("working = " + working);
+
+        final int cents = working.intValue();
+        System.out.println("cents = " + cents);
+
+        return new Dollar(cents);
+
+    }
 
 }
