@@ -19,7 +19,7 @@ public class Dollar implements Comparable<Dollar> {
 
     private static RoundingMode defaultRoundingMode = RoundingMode.HALF_UP;
 
-    private int _cents;
+    private final int _cents;
 
     private Dollar(final int cents) {
         _cents = cents;
@@ -125,28 +125,49 @@ public class Dollar implements Comparable<Dollar> {
 
     public Dollar multiply(final Number multiplier) {
 
+        RoundingMode roundingMode = defaultRoundingMode;
+
+        return multiply(multiplier, roundingMode);
+
+    }
+
+    public Dollar multiply(final Number multiplier,
+                           final RoundingMode roundingMode) {
+
         final BigDecimal multiplierBd = new BigDecimal(multiplier.doubleValue());
 
-        System.out.println("multiplierBd = " + multiplierBd);
-
         final BigDecimal currentValue = new BigDecimal(_cents).multiply(BigDecimal.TEN)
-                .setScale(0, defaultRoundingMode);
-        System.out.println("currentValue = " + currentValue);
+                .setScale(0, roundingMode);
 
         final BigDecimal result = multiplierBd.multiply(currentValue)
-                .setScale(0, defaultRoundingMode);
-        System.out.println("result = " + result);
+                .setScale(0, roundingMode);
 
         final BigDecimal working = result.divide(BigDecimal.TEN)
-                .setScale(0, defaultRoundingMode);
-
-        System.out.println("working = " + working);
+                .setScale(0, roundingMode);
 
         final int cents = working.intValue();
-        System.out.println("cents = " + cents);
 
         return new Dollar(cents);
 
+    }
+
+    public Dollar divide(final Number divisor, final RoundingMode roundingMode) {
+
+        BigDecimal divisorBD = new BigDecimal(divisor.doubleValue());
+        BigDecimal working = new BigDecimal(_cents);
+
+        working = working.multiply(BigDecimal.TEN);
+        working = working.divide(divisorBD);
+        working = working.divide(BigDecimal.TEN).setScale(0, roundingMode);
+
+        final BigDecimal pennies = working.divide(ONE_HUNDRED);
+
+        return Dollar.valueOf(pennies);
+
+    }
+
+    public Dollar divide(final Number divisor) {
+        return divide(divisor, defaultRoundingMode);
     }
 
 }

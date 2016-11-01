@@ -8,8 +8,6 @@ import org.junit.Test;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-import static org.junit.Assert.fail;
-
 /**
  *
  */
@@ -162,8 +160,6 @@ public class DollarTest {
 
         final Dollar value = Dollar.valueOf("10.00");
 
-
-
         Dollar.setDefaultRoundingMode(RoundingMode.HALF_DOWN);
         final Dollar halfDown = value.multiply(2.0005);
         Assert.assertEquals("half down", Dollar.valueOf("20.00"), halfDown);
@@ -177,19 +173,57 @@ public class DollarTest {
 
     @Test
     public void testMultiplyFractionSpecifyRoundingMode() throws Exception {
-        Assert.fail("test not implemented");
+
+        final Dollar value = Dollar.valueOf("10.00");
+
+        Dollar.setDefaultRoundingMode(RoundingMode.HALF_DOWN);
+
+        final Dollar halfUp = value.multiply(2.0005, RoundingMode.HALF_UP);
+        Assert.assertEquals("half up",Dollar.valueOf("20.01"), halfUp);
     }
 
     @Test
     public void testMultiplyImmutable() throws Exception {
-        fail("test not implemented");
+
+        final Dollar alpha = Dollar.valueOf("2.50");
+        final Dollar result = alpha.multiply(2);
+
+        final Dollar expected = Dollar.valueOf("5.00");
+
+        Assert.assertEquals(Dollar.valueOf("2.50"), alpha);
+
     }
 
     @Test
-    public void testDivide() throws Exception {
-        fail("test not implemented");
-        // will return the largest quantity divisible by the provided value.
-        // divide 10.00 by 3, get 3.33
+    public void testDivideDefaultRoundingMode() throws Exception {
+
+
+        Dollar.setDefaultRoundingMode(RoundingMode.HALF_DOWN);
+
+        final Dollar value = Dollar.valueOf("5.11");
+        Dollar actual = value.divide(2);
+        final Dollar expected = Dollar.valueOf("2.55");
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testDivideHalfDown() throws Exception {
+
+        final Dollar value = Dollar.valueOf("5.11");
+        Dollar actual = value.divide(2, RoundingMode.HALF_DOWN);
+        final Dollar expected = Dollar.valueOf("2.55");
+        Assert.assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void testDivideHalfUp() throws Exception {
+
+        final Dollar value = Dollar.valueOf("5.11");
+        Dollar actual = value.divide(2, RoundingMode.HALF_UP);
+        final Dollar expected = Dollar.valueOf("2.56");
+        Assert.assertEquals(expected, actual);
+
     }
 
     @Test
