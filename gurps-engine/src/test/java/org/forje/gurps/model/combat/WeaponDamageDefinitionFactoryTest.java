@@ -1,6 +1,8 @@
 package org.forje.gurps.model.combat;
 
 import junit.framework.Assert;
+import org.forje.gurps.model.equipment.weapons.WeaponDamageDefinition;
+import org.forje.gurps.model.equipment.weapons.WeaponDamageDefinitionFactory;
 import org.junit.Test;
 
 /**

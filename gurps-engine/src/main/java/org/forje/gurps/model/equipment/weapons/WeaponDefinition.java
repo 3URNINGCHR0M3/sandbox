@@ -1,34 +1,39 @@
 package org.forje.gurps.model.equipment.weapons;
 
 import org.forje.gurps.model.TechnologyLevel;
-import org.forje.gurps.model.equipment.weapons.WeaponType;
 
 /**
- * This class encapsulates the attributes of a weapon.  It is not an actionable class, and instead represents the table
- * entry for the weapon.
+ * Created by Brian on 4/15/15.
  */
-public class WeaponDefinition {
+public interface WeaponDefinition {
 
-    private TechnologyLevel _technologyLevel;
-    private WeaponType _weaponType;
-    private String _name;
-    private int _weight;
-    private int _reloadWeight;
-    /**
-     * The minumim strength to yeild the weapon
-     */
-    private int _minimumStrength;
-    private int _range;
-    private int _accuracy;
-    private int _accuracyScopeBonus;
-    private int _maximumRange;
-    /**
-     * Attacks at this range or greater (>=) will do only half damage.  May not be defined for all weapons.
-     */
-    private int _maximumEffectiveRange;
-    private int _rateOfFire;
-    private int _shots;
-    private boolean _twohandedLight;
-    private boolean _twohandedHeavy;
+    TechnologyLevel getTechnologyLevel();
 
+    WeaponType getWeaponType();
+
+    String getName();
+
+    int getWeight();
+
+    int getReloadWeight();
+
+    int getMinimumStrength();
+
+    int getRange();
+
+    int getAccuracy();
+
+    int getAccuracyScopeBonus();
+
+    int getMaximumRange();
+
+    int getMaximumEffectiveRange();
+
+    int getRateOfFire();
+
+    int getShots();
+
+    boolean isTwohandedLight();
+
+    boolean isTwohandedHeavy();
 }

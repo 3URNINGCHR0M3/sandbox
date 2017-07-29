@@ -4,6 +4,10 @@ package org.forje.gurps.model;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * This class is intended to provide a mapping from a coded value to a more complex object,
+ * typically an enumeration.
+ */
 public class GenericMap<T> {
 
     private final Map<String, T> STRING_TO_TYPE_MAP = new HashMap<>(10);

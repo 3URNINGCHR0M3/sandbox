@@ -1,6 +1,7 @@
 package org.forje.gurps.model.combat;
 
 import org.forje.gurps.model.Entity;
+import org.forje.gurps.model.equipment.weapons.Weapon;
 
 /**
 * Creates an instance of the AttackResolver interface for a given attack.

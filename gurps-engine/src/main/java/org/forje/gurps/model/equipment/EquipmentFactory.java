@@ -1,7 +1,7 @@
 package org.forje.gurps.model.equipment;
 
 /**
- * Created by Brian on 4/23/15.
+ * This class will search the Java classpath for
  */
 public class EquipmentFactory {
 }

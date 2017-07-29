@@ -25,6 +25,15 @@ public class RandomizerFactory {
         return new DefaultRandomizer(range);
     }
 
+    /**
+     * Builds and returns a Randomizer equivialant to the String passed, being of the form nds, where
+     * n is the number of dice and s is the number of sides on the dice.  For example, for a String "3d6" the
+     * object returned will be a Randomizer returning values between 3 and 18, inclusive.
+     *
+     * @param s a String of the form nds
+     *
+     * @return a Randomizer matching the n dice of s sides String provided.
+     */
     public static Randomizer fromString(final String s) {
 
         final Matcher matcher = REGEX_PATTERN.matcher(s);

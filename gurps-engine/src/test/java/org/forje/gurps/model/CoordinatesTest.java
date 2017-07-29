@@ -64,4 +64,9 @@ public class CoordinatesTest {
         Assert.assertEquals("z", 6, coordinates.getZ());
     }
 
+    @Test
+    public void testToString() throws Exception {
+        Assert.fail("test not implemented");
+    }
+
 }
