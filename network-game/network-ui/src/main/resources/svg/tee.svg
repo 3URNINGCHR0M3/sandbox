@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="140"
+   height="140"
+   viewBox="0 0 140 140"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="tee.svg"
+   inkscape:export-filename="/Users/Brian/Projects/sandbox/network-game/network-ui/src/main/resources/svg/tee.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.5857143"
+     inkscape:cx="29.840637"
+     inkscape:cy="70"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer2"
+     showgrid="false"
+     units="px"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1366"
+     inkscape:window-height="668"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1">
+    <sodipodi:guide
+       position="70,102.3506"
+       orientation="1,0"
+       id="guide4136" />
+    <sodipodi:guide
+       position="-57.203125,70"
+       orientation="0,1"
+       id="guide4138" />
+    <sodipodi:guide
+       position="-57.921875,100"
+       orientation="0,1"
+       id="guide4140" />
+    <sodipodi:guide
+       position="-56.90625,40"
+       orientation="0,1"
+       id="guide4142" />
+    <sodipodi:guide
+       position="40.00101,168.98285"
+       orientation="1,0"
+       id="guide4144" />
+    <sodipodi:guide
+       position="99.999443,105"
+       orientation="1,0"
+       id="guide4146" />
+    <sodipodi:guide
+       position="35.003194,75.922421"
+       orientation="1,0"
+       id="guide4150" />
+    <sodipodi:guide
+       position="-39.375,105"
+       orientation="0,1"
+       id="guide4152" />
+    <sodipodi:guide
+       position="105.00958,85.585275"
+       orientation="1,0"
+       id="guide4154" />
+    <sodipodi:guide
+       position="82.92306,35.003194"
+       orientation="0,1"
+       id="guide4156" />
+    <sodipodi:guide
+       position="45,26.5625"
+       orientation="1,0"
+       id="guide4164" />
+    <sodipodi:guide
+       position="52.356891,45.06045"
+       orientation="0,1"
+       id="guide4168" />
+    <sodipodi:guide
+       position="95.003906,56.738281"
+       orientation="1,0"
+       id="guide4170" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="tee"
+     sodipodi:insensitive="true"
+     style="display:inline">
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 0,40 35.003194,0 4.997816,-5 0,-35.00714219 59.998433,0.04789457 0,34.95924762 5.010137,5 35.35112,0 0.7071,60 -140.71424661,0 z"
+       id="path4161"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccc" />
+  </g>
+</svg>

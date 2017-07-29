@@ -1,0 +1,16 @@
+keep track of the number of unsolved spaces
+have a listener which manipulates that count each time a tile is solved
+this means you only have to check the enitre board twice
+* once at beginning
+* once at end to verify
+
+consider having a collection unsolved tiles
+keep track of outliers once algorithm has been applied
+
+
+visitor patten
+for a given location, vist all adjacent locations
+1 - 8
+would not be called for locations that are off array
+input to visit method would be everything vistor needs
+a meta data object for the location being visited
