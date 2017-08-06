@@ -6,4 +6,5 @@ This library will build on the patterns found in the JUnit library, but add func
   * The test will halt if a requirement is false
   * If a fatal condition is encountered, the test must be able to stop
   * The result of all assertions must be captured and made available for reporting
+* *Message is required on all assertions* - given the pattern of having multiple assertions in a single test, a message is required for all assertions.
 * *Single test per class* - Because integrations are expected to be more complex, having multiple tests in a single class would make for unmanagable source files.  Shared or repeated functionality should be moved upwards in the class heirartcy or into utility classes.
