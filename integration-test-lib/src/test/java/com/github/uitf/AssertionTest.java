@@ -1,6 +1,6 @@
 package com.github.uitf;
 
-import com.github.uitf.event.AssertEvent;
+import com.github.uitf.event.AssertionEvent;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -82,7 +82,7 @@ public class AssertionTest {
 
         Assertion.equals("not null v null", null, new Object());
 
-        final AssertEvent event = listener.getLast();
+        final AssertionEvent event = listener.getLast();
         Assert.assertEquals(false, event.getIsTrue());
     }
 
@@ -95,7 +95,7 @@ public class AssertionTest {
 
         Assertion.equals("not null v null", new Object(), null);
 
-        final AssertEvent event = listener.getLast();
+        final AssertionEvent event = listener.getLast();
         Assert.assertEquals(false, event.getIsTrue());
 
     }
@@ -109,7 +109,7 @@ public class AssertionTest {
 
         Assertion.equals("null v null", null, null);
 
-        final AssertEvent event = listener.getLast();
+        final AssertionEvent event = listener.getLast();
         Assert.assertEquals(true, event.getIsTrue());
 
     }

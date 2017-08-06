@@ -13,13 +13,13 @@ public interface AssertionEventListener extends EventListener {
      *
      * @param event details of the assertion
      */
-    public void assertion(AssertEvent event);
+    public void assertion(AssertionEvent event);
 
     /**
      * Called when an failure is produced by a test
      *
      * @param event details of the failure
      */
-    public void failure(AssertEvent event);
+    public void failure(AssertionEvent event);
 
 }

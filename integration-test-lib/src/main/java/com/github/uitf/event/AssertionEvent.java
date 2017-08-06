@@ -5,12 +5,12 @@ import java.util.EventObject;
 /**
  *
  */
-public class AssertEvent extends EventObject {
+public class AssertionEvent extends EventObject {
 
     private final boolean _isTrue;
     private final String _message;
 
-    public AssertEvent(final Object source, final boolean isTrue, final String message) {
+    public AssertionEvent(final Object source, final boolean isTrue, final String message) {
         super(source);
 
         if (message == null || message.trim().isEmpty()) {
@@ -21,7 +21,7 @@ public class AssertEvent extends EventObject {
         _message = message;
     }
 
-    public AssertEvent(final Object source, final String message) {
+    public AssertionEvent(final Object source, final String message) {
         this (source, false, message);
     }
 

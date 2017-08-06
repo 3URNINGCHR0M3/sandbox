@@ -1,6 +1,6 @@
 package com.github.uitf;
 
-import com.github.uitf.event.AssertEvent;
+import com.github.uitf.event.AssertionEvent;
 import com.github.uitf.event.AssertionEventListener;
 import org.junit.After;
 import org.junit.Assert;
@@ -18,15 +18,15 @@ public class AssertionEvalTest {
     static class TestListener implements AssertionEventListener {
 
         private final List _assertions = new ArrayList();
-        private AssertEvent _failure;
-        private AssertEvent _last;
+        private AssertionEvent _failure;
+        private AssertionEvent _last;
 
-        public void assertion(final AssertEvent event) {
+        public void assertion(final AssertionEvent event) {
             _last = event;
             _assertions.add(event);
         }
 
-        public void failure(final AssertEvent event) {
+        public void failure(final AssertionEvent event) {
             if (_failure != null) {
 
             } else {
@@ -38,11 +38,11 @@ public class AssertionEvalTest {
             return _assertions;
         }
 
-        public AssertEvent getFailure() {
+        public AssertionEvent getFailure() {
             return _failure;
         }
 
-        public AssertEvent getLast() {
+        public AssertionEvent getLast() {
             return _last;
         }
 
@@ -68,7 +68,7 @@ public class AssertionEvalTest {
         final String expectedMessage = "these two strings are the same literal";
         Assertion.equals(expectedMessage, "greek", "greek");
 
-        final AssertEvent event = _listener.getLast();
+        final AssertionEvent event = _listener.getLast();
 
         Assert.assertNotNull(event);
         Assert.assertEquals(expectedMessage, event.getMessage());
@@ -94,7 +94,7 @@ public class AssertionEvalTest {
         final String expectedMessage = "these two strings are the same literal";
         Assertion.equals(expectedMessage, "greek", "Greek");
 
-        final AssertEvent event = _listener.getLast();
+        final AssertionEvent event = _listener.getLast();
 
         Assert.assertNotNull(event);
         Assert.assertEquals(expectedMessage, event.getMessage());
@@ -104,7 +104,7 @@ public class AssertionEvalTest {
     @Test
     public void testEqualsBooleanPrimitiveTrue() throws Exception {
         Assertion.equals("message", true, true);
-        final AssertEvent event = _listener.getLast();
+        final AssertionEvent event = _listener.getLast();
         Assert.assertEquals(true, event.getIsTrue());
     }
 
@@ -112,7 +112,7 @@ public class AssertionEvalTest {
     @Test
     public void testEqualsBooleanPrimitiveFalse() throws Exception {
         Assertion.equals("message", true, false);
-        final AssertEvent event = _listener.getLast();
+        final AssertionEvent event = _listener.getLast();
         Assert.assertEquals(false, event.getIsTrue());
     }
 
@@ -123,7 +123,7 @@ public class AssertionEvalTest {
         long beta = Long.parseLong("12345");
 
         Assertion.equals("12345", alpha, beta);
-        final AssertEvent event = _listener.getLast();
+        final AssertionEvent event = _listener.getLast();
         Assert.assertEquals(true, event.getIsTrue());
 
     }
@@ -135,7 +135,7 @@ public class AssertionEvalTest {
         long beta = Long.parseLong("12344");
 
         Assertion.equals("12345", alpha, beta);
-        final AssertEvent event = _listener.getLast();
+        final AssertionEvent event = _listener.getLast();
         Assert.assertEquals(false, event.getIsTrue());
 
     }
@@ -148,7 +148,7 @@ public class AssertionEvalTest {
 
         Assertion.equals("char true", x,y);
 
-        final AssertEvent event = _listener.getLast();
+        final AssertionEvent event = _listener.getLast();
         Assert.assertEquals(true, event.getIsTrue());
 
     }
@@ -161,7 +161,7 @@ public class AssertionEvalTest {
 
         Assertion.equals("char true", x,y);
 
-        final AssertEvent event = _listener.getLast();
+        final AssertionEvent event = _listener.getLast();
         Assert.assertEquals(false, event.getIsTrue());
 
     }
@@ -181,7 +181,7 @@ public class AssertionEvalTest {
     public void testNullTrue() throws Exception {
 
         Assertion.isNull("This should be null", null);
-        final AssertEvent event = _listener.getLast();
+        final AssertionEvent event = _listener.getLast();
         Assert.assertEquals(true, event.getIsTrue());
 
     }
@@ -189,7 +189,7 @@ public class AssertionEvalTest {
     public void testNullFalse() throws Exception {
 
         Assertion.isNull("This should be null", new Object());
-        final AssertEvent event = _listener.getLast();
+        final AssertionEvent event = _listener.getLast();
         Assert.assertEquals(false, event.getIsTrue());
 
     }
@@ -197,14 +197,14 @@ public class AssertionEvalTest {
     @Test
     public void testNotNullTrue() throws Exception {
         Assertion.notNull("message", new Object());
-        final AssertEvent event = _listener.getLast();
+        final AssertionEvent event = _listener.getLast();
         Assert.assertEquals(true, event.getIsTrue());
     }
 
     @Test
     public void testNotNullFalse() throws Exception {
         Assertion.notNull("message", null);
-        final AssertEvent event = _listener.getLast();
+        final AssertionEvent event = _listener.getLast();
         Assert.assertEquals(false, event.getIsTrue());
     }
 
@@ -214,7 +214,7 @@ public class AssertionEvalTest {
         Object x = new Object();
         Object y = x;
         Assertion.same("passing the same object reference",x,y);
-        final AssertEvent event = _listener.getLast();
+        final AssertionEvent event = _listener.getLast();
         Assert.assertEquals(true, event.getIsTrue());
 
     }
@@ -224,7 +224,7 @@ public class AssertionEvalTest {
 
         Assertion.same("passing two different object reference", new Object(), new Object());
 
-        final AssertEvent event = _listener.getLast();
+        final AssertionEvent event = _listener.getLast();
         Assert.assertEquals(false, event.getIsTrue());
 
     }
@@ -233,7 +233,7 @@ public class AssertionEvalTest {
     public void testSameNullNotNull() throws Exception {
         Assertion.same("dummy", new Object(), null);
 
-        final AssertEvent event = _listener.getLast();
+        final AssertionEvent event = _listener.getLast();
         Assert.assertEquals(false, event.getIsTrue());
     }
 
@@ -241,7 +241,7 @@ public class AssertionEvalTest {
     public void testSameNullNull() throws Exception {
         Assertion.same("dummy", null, null);
 
-        final AssertEvent event = _listener.getLast();
+        final AssertionEvent event = _listener.getLast();
         Assert.assertEquals(true, event.getIsTrue());
     }
 
@@ -249,7 +249,7 @@ public class AssertionEvalTest {
     public void testSameNotNullNull() throws Exception {
         Assertion.same("dummy", null, new Object());
 
-        final AssertEvent event = _listener.getLast();
+        final AssertionEvent event = _listener.getLast();
         Assert.assertEquals(false, event.getIsTrue());
     }
 
@@ -257,7 +257,7 @@ public class AssertionEvalTest {
     public void testNotSameTrue() throws Exception {
         Assertion.notSame("passing two different object reference", new Object(), new Object());
 
-        final AssertEvent event = _listener.getLast();
+        final AssertionEvent event = _listener.getLast();
         Assert.assertEquals(true, event.getIsTrue());
     }
 
@@ -266,7 +266,7 @@ public class AssertionEvalTest {
         Object x = new Object();
         Object y = x;
         Assertion.notSame("passing the same object reference",x,y);
-        final AssertEvent event = _listener.getLast();
+        final AssertionEvent event = _listener.getLast();
         Assert.assertEquals(false, event.getIsTrue());
     }
 

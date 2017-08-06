@@ -1,6 +1,6 @@
 package com.github.uitf;
 
-import com.github.uitf.event.AssertEvent;
+import com.github.uitf.event.AssertionEvent;
 import com.github.uitf.event.AssertionEventListener;
 
 /**
@@ -40,7 +40,7 @@ public class Assertion {
             result = expected.equals(actual);
         }
 
-        _listener.assertion(new AssertEvent(Assertion.class, result, message));
+        _listener.assertion(new AssertionEvent(Assertion.class, result, message));
 
 
     }
@@ -50,15 +50,15 @@ public class Assertion {
     }
 
     public static void same(final String message, final Object expected, final Object actual) {
-        _listener.assertion(new AssertEvent(Assertion.class, expected == actual, message));
+        _listener.assertion(new AssertionEvent(Assertion.class, expected == actual, message));
     }
 
     public static void notSame(final String message, final Object expected, final Object actual) {
-        _listener.assertion(new AssertEvent(Assertion.class, expected != actual, message));
+        _listener.assertion(new AssertionEvent(Assertion.class, expected != actual, message));
     }
 
     public static void notNull(final String message, final Object subject) {
-        _listener.assertion(new AssertEvent(Assertion.class, subject != null, message));
+        _listener.assertion(new AssertionEvent(Assertion.class, subject != null, message));
     }
 
 }
