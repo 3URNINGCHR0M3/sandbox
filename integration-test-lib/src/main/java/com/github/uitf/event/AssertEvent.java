@@ -12,6 +12,11 @@ public class AssertEvent extends EventObject {
 
     public AssertEvent(final Object source, final boolean isTrue, final String message) {
         super(source);
+
+        if (message == null || message.trim().isEmpty()) {
+            throw new IllegalArgumentException("Message cannot be null or empty String.");
+        }
+
         _isTrue = isTrue;
         _message = message;
     }

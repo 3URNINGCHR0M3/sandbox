@@ -50,4 +50,36 @@ public class AssertEventTest {
         Assert.assertEquals("splat!!: true", event.toString());
     }
 
+    @Test
+    public void testMessageCannotBeEmptyString() throws Exception {
+
+        try {
+            new AssertEvent(this, false, "");
+            Assert.fail("Expected an exception.");
+        } catch (IllegalArgumentException e) {
+            Assert.assertEquals("Message cannot be null or empty String.", e.getMessage());
+        }
+
+    }
+
+    @Test
+    public void testMessageCannotBeNull() throws Exception {
+        try {
+            new AssertEvent(this, false, null);
+            Assert.fail("Expected an exception.");
+        } catch (IllegalArgumentException e) {
+            Assert.assertEquals("Message cannot be null or empty String.", e.getMessage());
+        }
+    }
+
+    @Test
+    public void testMessageCannotBeAllSpaces() throws Exception {
+        try {
+            new AssertEvent(this, false, "    ");
+            Assert.fail("Expected an exception.");
+        } catch (IllegalArgumentException e) {
+            Assert.assertEquals("Message cannot be null or empty String.", e.getMessage());
+        }
+    }
+
 }
