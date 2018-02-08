@@ -1,1 +1,13 @@
-{"type":"Ranged", "TL":8,"name":"Sniper Rifle, .338","dmg":"9d+1 pi","acc":"6+3","rng":"1500/5500","rof":1,"shots":"4+1(3)","cost":5600,"wgt":"17.5/0.8","str":"11B†"}
+{
+    "type": "Ranged",
+    "TL": 8,
+    "name": "Sniper Rifle, .338",
+    "dmg": "9d+1 pi",
+    "acc": "6+3",
+    "rng": "1500/5500",
+    "rof": 1,
+    "shots": "4+1(3)",
+    "cost": 5600,
+    "wgt": "17.5/0.8",
+    "str": "11B†"
+}

@@ -1,0 +1,14 @@
+{
+    "class":"Firearm",
+    "type": "Ranged",
+    "TL": 7,
+    "name": "Revolver, .357",
+    "dmg": "3d-1 pi",
+    "acc": "2",
+    "rng": "150/1850",
+    "rof": 3,
+    "shots": "6(3i)",
+    "cost": 350,
+    "wgt": "3/0.21",
+    "str": "10"
+}

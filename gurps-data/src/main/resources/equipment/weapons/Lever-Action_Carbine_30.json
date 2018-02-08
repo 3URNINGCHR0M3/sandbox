@@ -1,1 +1,14 @@
-{"type":"Ranged","TL":5,"name":"Lever-Action Carbine, .30","dmg":"5d pi","acc":"4","rng":"450/3000","rof":1,"shots":"6+1(3i)","cost":300,"wgt":"7/0.3","str":"10†"}
+{
+    "class":"Firearm",
+    "type": "Ranged",
+    "TL": 5,
+    "name": "Lever-Action Carbine, .30",
+    "dmg": "5d pi",
+    "acc": "4",
+    "rng": "450/3000",
+    "rof": 1,
+    "shots": "6+1(3i)",
+    "cost": 300,
+    "wgt": "7/0.3",
+    "str": "10†"
+}

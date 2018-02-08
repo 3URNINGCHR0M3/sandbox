@@ -6,10 +6,12 @@ import org.forje.gurps.model.combat.MeleeType;
 /**
  * This defines the interface for documenting the damage done by a weapon.
  */
-public interface WeaponDamageDefinition {
+public interface MuscleBasedDamageDefinition {
+
     public MeleeType getMeleeType();
 
     public int getDamageModifier();
 
-    DamageType getDamageType();
+    public DamageType getDamageType();
+
 }

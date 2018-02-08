@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 
 /**
  * Responsible for creating new instances of the Randomizer interface.  Instances manage their own legal range.
- * Once created, the instance will return random values within that range.
+ * Once created, the parseMuscleBased will return random values within that range.
  */
 public class RandomizerFactory {
 

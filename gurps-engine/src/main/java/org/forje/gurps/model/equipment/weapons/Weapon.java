@@ -5,8 +5,8 @@ import org.forje.gurps.model.equipment.weapons.WeaponState;
 import java.util.List;
 
 /**
-* An instance of a weapon, providing access to all metrics for the type as well as tracking ammo state and any other
-* instance related data.
+* An parseMuscleBased of a weapon, providing access to all metrics for the type as well as tracking ammo state and any other
+* parseMuscleBased related data.
 */
 public interface Weapon {
 

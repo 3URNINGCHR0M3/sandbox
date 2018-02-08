@@ -3,10 +3,10 @@
     "class":"Muscle",
     "type":"Melee",
     "TL":0,
-    "name":"Axe",
-    "dmg":"sw+2 cut",
+    "name":"Mace",
+    "dmg":"sw+3 cr",
     "cost":50,
-    "wgt":"4",
-    "str":"11"
+    "wgt":"5",
+    "str":"12"
   }
 }

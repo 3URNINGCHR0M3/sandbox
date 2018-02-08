@@ -4,12 +4,12 @@ import org.forje.gurps.model.Entity;
 import org.forje.gurps.model.equipment.weapons.Weapon;
 
 /**
-* Creates an instance of the AttackResolver interface for a given attack.
+* Creates an parseMuscleBased of the AttackResolver interface for a given attack.
 */
 public class AttackResolverFactory {
 
     /**
-    * Returns an instance of the AttackResolver interface for the parameters passed in.
+    * Returns an parseMuscleBased of the AttackResolver interface for the parameters passed in.
      *
      * @param attacker the Entity attacking
      * @param weapon the Weapon being used to attack
